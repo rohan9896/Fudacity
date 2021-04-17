@@ -1,0 +1,54 @@
+@import url("https://effortlessui.netlify.app/base.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.videoCard {
+  font-family: "Poppins", sans-serif;
+  width: fit-content;
+  background-color: #ebecf0;
+  cursor: pointer;
+}
+
+.videoCard:hover {
+    border: rgb(199, 189, 189) 1px solid;
+}
+
+.videoCard__detailsContainer {
+  display: flex;
+  margin: 0 0.3rem;
+  padding: 1rem 0;
+  margin: 0;
+  width: 25rem;
+}
+
+.videoCard__titleContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5rem;
+}
+
+.videoCard__title,
+.videoCard__secondTitle {
+  margin: 0 0.4 rem;
+}
+
+.videoCard__title {
+    font-weight: 900;
+}
+
+.videoCard__secondTitle {
+    font-size: smaller;
+}
+
+.videoCard__thumbnail {
+  position: relative;
+}
+
+.videoCard__videoLength {
+  position: absolute;
+  bottom: 1rem;
+  right: 0.6rem;
+  background-color: black;
+  color: white;
+  padding: 0.2rem;
+  font-size: smaller;
+}

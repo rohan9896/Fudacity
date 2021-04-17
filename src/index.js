@@ -1,11 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import LikedHistoryWatchLaterProvider from "./Context/liked-history-watchLater-context";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <LikedHistoryWatchLaterProvider>
+      <App />
+    </LikedHistoryWatchLaterProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

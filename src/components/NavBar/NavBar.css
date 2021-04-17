@@ -1,0 +1,24 @@
+@import url("https://effortlessui.netlify.app/base.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.nav2__navList {
+    margin: 0;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+.nav2__navStart {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav2__navStart > h2 {
+    color: white;
+}
+
+.nav2__navEnd {
+    display: flex;
+    border: none;
+    color: white;
+}

@@ -1,8 +1,16 @@
 import "./VideoCardExpand.css"
 import Plyr from "plyr-react";
 import "plyr-react/dist/plyr.css";
+import { useState, useEffect } from "react";
 
 function VideoCardExpand() {
+
+  const [note, setNote] = useState(JSON.parse(localStorage.getItem("key")));
+
+  useEffect(() => {
+    localStorage.setItem("key", JSON.stringify(note));
+  }, [note])
+
   const videoSrc = {
     type: "video",
     sources: [
@@ -51,7 +59,7 @@ function VideoCardExpand() {
       </div>
       <div className="videoCardExpand__notesContainer">
         <h2>Take Notes</h2>
-        <textarea className="videoCardExpand__notes"></textarea>
+        <textarea value={note} onChange={(e) => setNote(e.target.value)} className="videoCardExpand__notes"></textarea>
       </div>
     </div>
   );
