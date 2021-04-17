@@ -1,9 +1,10 @@
 import './App.css';
+import VideoCardExpand from './components/VideoCardExpand/VideoCardExpand';
 
 function App() {
   return (
-    <div className="App">
-      
+    <div>
+      <VideoCardExpand />      
     </div>
   );
 }
