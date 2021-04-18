@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 function VideoCard({ id, thumbnail, title, videoLength, channel, channelImg }) {
   return (
+    <Link to={`/${id}`} style={{textDecoration: "none", color: "black"}}>
     <div key={id} className="videoCard">
       <div className="videoCard__thumbnail">
         <LazyLoadImage
@@ -34,6 +35,7 @@ function VideoCard({ id, thumbnail, title, videoLength, channel, channelImg }) {
         </div>
       </div>
     </div>
+    </Link>
   );
 }
 

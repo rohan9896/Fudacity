@@ -2,20 +2,31 @@ import "./VideoCardExpand.css";
 import Plyr from "plyr-react";
 import "plyr-react/dist/plyr.css";
 import { useRef } from "react";
+import { useLikedHistoryWatchLater } from "../../Context/liked-history-watchLater-context";
 
-function VideoCardExpand() {
+function VideoCardExpand({
+  id,
+  thumbnail,
+  title,
+  videoLength,
+  channel,
+  channelImg,
+  link,
+  liked,
+  disliked,
+}) {
   const inputNotes = useRef();
+  const {state, dispatch} = useLikedHistoryWatchLater();
 
   const save = () => {
     localStorage.setItem("key", JSON.stringify(inputNotes.current.value));
-    // console.log(inputNotes.current)
   };
 
   const videoSrc = {
     type: "video",
     sources: [
       {
-        src: "https://www.youtube.com/watch?v=_AyFP5s69N4",
+        src: link,
         provider: "youtube",
       },
     ],
@@ -28,28 +39,35 @@ function VideoCardExpand() {
       </div>
       <div className="videoCardExpand__details">
         <div>
-          <p className="videoCardExpand__titleHeader">#React #WebDev</p>
-          <p className="videoCardExpand__title">
-            Learn useCallback In 8 Minutes
-          </p>
+          <p className="videoCardExpand__title">{title}</p>
           <p className="videoCardExpand__viewsAndDate">
-            <strong>WebDev Simplified</strong> | 240,000 views | 28 July, 2019
+            <strong>{channel}</strong> | {Math.ceil(Math.random() * 999)} views
+            | {Math.ceil(Math.random() * 12)} months ago
           </p>
         </div>
         <div className="videoCardExpand__Buttons">
-          <button className="icon-button">
+          <button onClick={() => dispatch({type: "ADD_TO_LIKED", payload: id})} className="btn">
             <img
               alt="btn"
-              src="https://raw.githubusercontent.com/rohan9896/Testing-for-CSS-component-library/b57630ad485a8ad95990506a9f8d00db49eb57bf/icons/videoLib/like.svg"
+              src={
+                liked
+                  ? "https://raw.githubusercontent.com/rohan9896/Testing-for-CSS-component-library/403bf3efef4d411f345f5b77cfc87e638baeb54f/icons/videoLib/like-filled.svg"
+                  : "https://raw.githubusercontent.com/rohan9896/Testing-for-CSS-component-library/b57630ad485a8ad95990506a9f8d00db49eb57bf/icons/videoLib/like.svg"
+              }
             />
           </button>
-          <button className="icon-button">
+          <button onClick={() => dispatch({type: "REMOVE_FROM_LIKED", payload: id})} className="btn">
             <img
               alt="btn"
-              src="https://raw.githubusercontent.com/rohan9896/Testing-for-CSS-component-library/b57630ad485a8ad95990506a9f8d00db49eb57bf/icons/videoLib/dislike.svg"
+              src={
+                disliked
+                  ? "https://raw.githubusercontent.com/rohan9896/Testing-for-CSS-component-library/403bf3efef4d411f345f5b77cfc87e638baeb54f/icons/videoLib/dislike-filled.svg"
+                  : "https://raw.githubusercontent.com/rohan9896/Testing-for-CSS-component-library/b57630ad485a8ad95990506a9f8d00db49eb57bf/icons/videoLib/dislike.svg"
+              }
             />
           </button>
-          <button className="icon-button">
+          {console.log(state.likedArr)}
+          <button className="btn">
             <img
               alt="btn"
               src="https://raw.githubusercontent.com/rohan9896/Testing-for-CSS-component-library/b57630ad485a8ad95990506a9f8d00db49eb57bf/icons/videoLib/playlist.svg"

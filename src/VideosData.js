@@ -10,6 +10,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s68-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=8hly31xKli0",
+      liked: false,
+      disliked: false
     },
     {
       id: "92S4zgXN17o",
@@ -20,6 +22,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnjxmp9I5SL4FJUX1HWlg0k3jZVimZ6aNmuhPDJL=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=92S4zgXN17o",
+      liked: false,
+      disliked: false
     },
     {
       id: "z9bZufPHFLU",
@@ -31,6 +35,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwniWFbtX2drltDWOBZGP1KhLVTqDypqg4oQPK7Pc=s176-c-k-c0x00ffffff-no-rj-mo",
       link: "https://www.youtube.com/watch?v=z9bZufPHFLU",
+      liked: false,
+      disliked: false
     },
     {
       id: "F8xQ5joLlD0",
@@ -41,6 +47,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnhIfHbN8Ucj_OEERe0uOsOHFJh9Giw_XFDP6dm_=s176-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=F8xQ5joLlD0",
+      liked: false,
+      disliked: false
     },
   ];
 
@@ -55,6 +63,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s68-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=8hly31xKli0",
+      liked: false,
+      disliked: false
     },
     {
       id: "92S4zgXN17o",
@@ -65,6 +75,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnjxmp9I5SL4FJUX1HWlg0k3jZVimZ6aNmuhPDJL=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=92S4zgXN17o",
+      liked: false,
+      disliked: false
     },
     {
       id: "z9bZufPHFLU",
@@ -76,6 +88,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwniWFbtX2drltDWOBZGP1KhLVTqDypqg4oQPK7Pc=s176-c-k-c0x00ffffff-no-rj-mo",
       link: "https://www.youtube.com/watch?v=z9bZufPHFLU",
+      liked: false,
+      disliked: false
     },
     {
       id: "F8xQ5joLlD0",
@@ -86,6 +100,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnhIfHbN8Ucj_OEERe0uOsOHFJh9Giw_XFDP6dm_=s176-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=F8xQ5joLlD0",
+      liked: false,
+      disliked: false
     },
   ];
 
@@ -100,6 +116,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s68-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=8hly31xKli0",
+      liked: false,
+      disliked: false
     },
     {
       id: "92S4zgXN17o",
@@ -110,6 +128,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnjxmp9I5SL4FJUX1HWlg0k3jZVimZ6aNmuhPDJL=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=92S4zgXN17o",
+      liked: false,
+      disliked: false
     },
     {
       id: "z9bZufPHFLU",
@@ -121,6 +141,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwniWFbtX2drltDWOBZGP1KhLVTqDypqg4oQPK7Pc=s176-c-k-c0x00ffffff-no-rj-mo",
       link: "https://www.youtube.com/watch?v=z9bZufPHFLU",
+      liked: false,
+      disliked: false
     },
     {
       id: "F8xQ5joLlD0",
@@ -131,6 +153,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnhIfHbN8Ucj_OEERe0uOsOHFJh9Giw_XFDP6dm_=s176-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=F8xQ5joLlD0",
+      liked: false,
+      disliked: false
     },
   ];
 
@@ -145,6 +169,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s68-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=8hly31xKli0",
+      liked: false,
+      disliked: false
     },
     {
       id: "92S4zgXN17o",
@@ -155,6 +181,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnjxmp9I5SL4FJUX1HWlg0k3jZVimZ6aNmuhPDJL=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=92S4zgXN17o",
+      liked: false,
+      disliked: false
     },
     {
       id: "z9bZufPHFLU",
@@ -166,6 +194,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwniWFbtX2drltDWOBZGP1KhLVTqDypqg4oQPK7Pc=s176-c-k-c0x00ffffff-no-rj-mo",
       link: "https://www.youtube.com/watch?v=z9bZufPHFLU",
+      liked: false,
+      disliked: false
     },
     {
       id: "F8xQ5joLlD0",
@@ -176,6 +206,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnhIfHbN8Ucj_OEERe0uOsOHFJh9Giw_XFDP6dm_=s176-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=F8xQ5joLlD0",
+      liked: false,
+      disliked: false
     },
   ];
 
@@ -190,6 +222,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s68-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=8hly31xKli0",
+      liked: false,
+      disliked: false
     },
     {
       id: "92S4zgXN17o",
@@ -200,6 +234,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnjxmp9I5SL4FJUX1HWlg0k3jZVimZ6aNmuhPDJL=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=92S4zgXN17o",
+      liked: false,
+      disliked: false
     },
     {
       id: "z9bZufPHFLU",
@@ -211,6 +247,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwniWFbtX2drltDWOBZGP1KhLVTqDypqg4oQPK7Pc=s176-c-k-c0x00ffffff-no-rj-mo",
       link: "https://www.youtube.com/watch?v=z9bZufPHFLU",
+      liked: false,
+      disliked: false
     },
     {
       id: "F8xQ5joLlD0",
@@ -221,6 +259,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnhIfHbN8Ucj_OEERe0uOsOHFJh9Giw_XFDP6dm_=s176-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=F8xQ5joLlD0",
+      liked: false,
+      disliked: false
     },
   ];
 
@@ -235,6 +275,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s68-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=8hly31xKli0",
+      liked: false,
+      disliked: false
     },
     {
       id: "92S4zgXN17o",
@@ -245,6 +287,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnjxmp9I5SL4FJUX1HWlg0k3jZVimZ6aNmuhPDJL=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=92S4zgXN17o",
+      liked: false,
+      disliked: false
     },
     {
       id: "z9bZufPHFLU",
@@ -256,6 +300,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwniWFbtX2drltDWOBZGP1KhLVTqDypqg4oQPK7Pc=s176-c-k-c0x00ffffff-no-rj-mo",
       link: "https://www.youtube.com/watch?v=z9bZufPHFLU",
+      liked: false,
+      disliked: false
     },
     {
       id: "F8xQ5joLlD0",
@@ -266,6 +312,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnhIfHbN8Ucj_OEERe0uOsOHFJh9Giw_XFDP6dm_=s176-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=F8xQ5joLlD0",
+      liked: false,
+      disliked: false
     },
   ];
 
@@ -280,6 +328,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s68-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=8hly31xKli0",
+      liked: false,
+      disliked: false
     },
     {
       id: "92S4zgXN17o",
@@ -290,6 +340,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnjxmp9I5SL4FJUX1HWlg0k3jZVimZ6aNmuhPDJL=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=92S4zgXN17o",
+      liked: false,
+      disliked: false
     },
     {
       id: "z9bZufPHFLU",
@@ -301,6 +353,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwniWFbtX2drltDWOBZGP1KhLVTqDypqg4oQPK7Pc=s176-c-k-c0x00ffffff-no-rj-mo",
       link: "https://www.youtube.com/watch?v=z9bZufPHFLU",
+      liked: false,
+      disliked: false
     },
     {
       id: "F8xQ5joLlD0",
@@ -311,6 +365,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnhIfHbN8Ucj_OEERe0uOsOHFJh9Giw_XFDP6dm_=s176-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=F8xQ5joLlD0",
+      liked: false,
+      disliked: false
     },
   ];
 
@@ -325,6 +381,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s68-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=8hly31xKli0",
+      liked: false,
+      disliked: false
     },
     {
       id: "92S4zgXN17o",
@@ -335,6 +393,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnjxmp9I5SL4FJUX1HWlg0k3jZVimZ6aNmuhPDJL=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=92S4zgXN17o",
+      liked: false,
+      disliked: false
     },
     {
       id: "z9bZufPHFLU",
@@ -346,6 +406,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwniWFbtX2drltDWOBZGP1KhLVTqDypqg4oQPK7Pc=s176-c-k-c0x00ffffff-no-rj-mo",
       link: "https://www.youtube.com/watch?v=z9bZufPHFLU",
+      liked: false,
+      disliked: false
     },
     {
       id: "F8xQ5joLlD0",
@@ -356,6 +418,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnhIfHbN8Ucj_OEERe0uOsOHFJh9Giw_XFDP6dm_=s176-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=F8xQ5joLlD0",
+      liked: false,
+      disliked: false
     },
   ];
 
@@ -370,6 +434,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s68-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=8hly31xKli0",
+      liked: false,
+      disliked: false
     },
     {
       id: "92S4zgXN17o",
@@ -380,6 +446,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnjxmp9I5SL4FJUX1HWlg0k3jZVimZ6aNmuhPDJL=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=92S4zgXN17o",
+      liked: false,
+      disliked: false
     },
     {
       id: "z9bZufPHFLU",
@@ -391,6 +459,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwniWFbtX2drltDWOBZGP1KhLVTqDypqg4oQPK7Pc=s176-c-k-c0x00ffffff-no-rj-mo",
       link: "https://www.youtube.com/watch?v=z9bZufPHFLU",
+      liked: false,
+      disliked: false
     },
     {
       id: "F8xQ5joLlD0",
@@ -401,6 +471,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnhIfHbN8Ucj_OEERe0uOsOHFJh9Giw_XFDP6dm_=s176-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=F8xQ5joLlD0",
+      liked: false,
+      disliked: false
     },
   ];
 
@@ -415,6 +487,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s68-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=8hly31xKli0",
+      liked: false,
+      disliked: false
     },
     {
       id: "92S4zgXN17o",
@@ -425,6 +499,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnjxmp9I5SL4FJUX1HWlg0k3jZVimZ6aNmuhPDJL=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=92S4zgXN17o",
+      liked: false,
+      disliked: false
     },
     {
       id: "z9bZufPHFLU",
@@ -436,6 +512,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwniWFbtX2drltDWOBZGP1KhLVTqDypqg4oQPK7Pc=s176-c-k-c0x00ffffff-no-rj-mo",
       link: "https://www.youtube.com/watch?v=z9bZufPHFLU",
+      liked: false,
+      disliked: false
     },
     {
       id: "F8xQ5joLlD0",
@@ -446,6 +524,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnhIfHbN8Ucj_OEERe0uOsOHFJh9Giw_XFDP6dm_=s176-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=F8xQ5joLlD0",
+      liked: false,
+      disliked: false
     },
   ];
 
@@ -460,6 +540,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s68-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=8hly31xKli0",
+      liked: false,
+      disliked: false
     },
     {
       id: "92S4zgXN17o",
@@ -470,6 +552,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnjxmp9I5SL4FJUX1HWlg0k3jZVimZ6aNmuhPDJL=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=92S4zgXN17o",
+      liked: false,
+      disliked: false
     },
     {
       id: "z9bZufPHFLU",
@@ -481,6 +565,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwniWFbtX2drltDWOBZGP1KhLVTqDypqg4oQPK7Pc=s176-c-k-c0x00ffffff-no-rj-mo",
       link: "https://www.youtube.com/watch?v=z9bZufPHFLU",
+      liked: false,
+      disliked: false
     },
     {
       id: "F8xQ5joLlD0",
@@ -491,6 +577,8 @@ function generateVideosData() {
       channelImg:
         "https://yt3.ggpht.com/ytc/AAUvwnhIfHbN8Ucj_OEERe0uOsOHFJh9Giw_XFDP6dm_=s176-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=F8xQ5joLlD0",
+      liked: false,
+      disliked: false
     },
   ];
   return {

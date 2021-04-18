@@ -6,6 +6,7 @@ export const LikedHistoryWatchLaterContext = createContext();
 const actionTypes = {
   ADD_TO_HISTORY: "ADD_TO_HISTORY",
   CLEAR_HISTORY: "CLEAR_HISTORY",
+  REMOVE_FROM_HISTORY: "REMOVE_FROM_HISTORY",
   ADD_TO_WATCHLATER: "ADD_TO_WATCHLATER",
   REMOVE_FROM_WATCHLATER: "REMOVE_FROM_WATCHLATER",
   ADD_TO_LIKED: "ADD_TO_LIKED",
@@ -41,6 +42,18 @@ const reducerFunction = (state, action) => {
           ),
         ],
       };
+    case actionTypes.REMOVE_FROM_HISTORY:
+      return {
+        ...state,
+        historyArr: state.historyArr.filter(
+          (video) => video.id !== action.payload
+        ),
+      };
+    case actionTypes.CLEAR_HISTORY:
+      return {
+        ...state,
+        historyArr: [],
+      };
     case actionTypes.ADD_TO_LIKED:
       return {
         ...state,
@@ -51,6 +64,21 @@ const reducerFunction = (state, action) => {
             )
           ),
         ],
+        allVideosArr: state.allVideosArr.map((video) =>
+          video.id === action.payload
+            ? { ...video, liked: true, disliked: false }
+            : video
+        ),
+      };
+    case actionTypes.REMOVE_FROM_LIKED:
+      return {
+        ...state,
+        likedArr: state.likedArr.filter((video) => video.id !== action.payload),
+        allVideosArr: state.allVideosArr.map((video) =>
+          video.id === action.payload
+            ? { ...video, liked: false, disliked: true }
+            : video
+        ),
       };
     case actionTypes.ADD_TO_WATCHLATER:
       return {
@@ -62,6 +90,13 @@ const reducerFunction = (state, action) => {
             )
           ),
         ],
+      };
+    case actionTypes.REMOVE_FROM_WATCHLATER:
+      return {
+        ...state,
+        watchLaterArr: state.watchLaterArr.filter(
+          (video) => video.id !== action.payload
+        ),
       };
     default:
       break;
