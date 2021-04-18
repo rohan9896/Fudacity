@@ -54,40 +54,40 @@ function generateVideosData() {
 
   const DevOps = [
     {
-      id: "8hly31xKli0",
-      thumbnail: "https://i3.ytimg.com/vi/8hly31xKli0/hqdefault.jpg",
+      id: "_Gpe1Zn-1fE",
+      thumbnail: "https://i3.ytimg.com/vi/_Gpe1Zn-1fE/hqdefault.jpg",
       title:
-        "Algorithms and Data Structures - Full Course for Beginners from Treehouse",
-      videoLength: "5:22:00",
-      channel: "freeCodeCamp.org",
+        "What is DevOps? Easy way",
+      videoLength: "9:05",
+      channel: "Hitesh Choudhary",
       channelImg:
-        "https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s68-c-k-c0x00ffffff-no-rj",
-      link: "https://www.youtube.com/watch?v=8hly31xKli0",
+        "https://yt3.ggpht.com/ytc/AAUvwnihtV8Mb0JZFkkAEf9KKN4m4WNNeHkxUb6Wuvc_5w=s88-c-k-c0x00ffffff-no-rj",
+      link: "https://www.youtube.com/watch?v=_Gpe1Zn-1fE",
       liked: false,
       disliked: false
     },
     {
-      id: "92S4zgXN17o",
-      thumbnail: "https://i3.ytimg.com/vi/92S4zgXN17o/hqdefault.jpg",
-      title: "Introduction to data structures",
-      videoLength: "6:33",
-      channel: "mycodeschool",
+      id: "_I94-tJlovg",
+      thumbnail: "https://i3.ytimg.com/vi/_I94-tJlovg/hqdefault.jpg",
+      title: "What is DevOps? - In Simple English",
+      videoLength: "7:06",
+      channel: "Rackspace Technology",
       channelImg:
-        "https://yt3.ggpht.com/ytc/AAUvwnjxmp9I5SL4FJUX1HWlg0k3jZVimZ6aNmuhPDJL=s88-c-k-c0x00ffffff-no-rj",
-      link: "https://www.youtube.com/watch?v=92S4zgXN17o",
+        "https://yt3.ggpht.com/ytc/AAUvwnjFFW-urVXeyl9vnyQ3tvHp4LsffPZLRjIQ9W3vkA=s88-c-k-c0x00ffffff-no-rj",
+      link: "https://www.youtube.com/watch?v=_I94-tJlovg",
       liked: false,
       disliked: false
     },
     {
-      id: "z9bZufPHFLU",
-      thumbnail: "https://img.youtube.com/vi/z9bZufPHFLU/mqdefault.jpg",
+      id: "S_0q75eD8Yc",
+      thumbnail: "https://i3.ytimg.com/vi/S_0q75eD8Yc/hqdefault.jpg",
       title:
-        "Introduction to C++ | Data Structures and Algorithms | College Placement Course | Lecture 1",
-      videoLength: "5:54",
-      channel: "Apna College",
+        "DevOps Tools Full Course in 11 Hours | DevOps Tools Tutorial | DevOps Training | Edureka",
+      videoLength: "11:04:05",
+      channel: "edureka!",
       channelImg:
-        "https://yt3.ggpht.com/ytc/AAUvwniWFbtX2drltDWOBZGP1KhLVTqDypqg4oQPK7Pc=s176-c-k-c0x00ffffff-no-rj-mo",
-      link: "https://www.youtube.com/watch?v=z9bZufPHFLU",
+        "https://yt3.ggpht.com/ytc/AAUvwni7i_dF9urC5uwdLIRQU89f5H4krFAgJgywql8kiA=s88-c-k-c0x00ffffff-no-rj",
+      link: "https://www.youtube.com/watch?v=S_0q75eD8Yc",
       liked: false,
       disliked: false
     },
