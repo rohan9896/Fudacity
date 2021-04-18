@@ -16,15 +16,15 @@ function VideoCardExpand({
   disliked,
 }) {
   const inputNotes = useRef();
-  const {state, dispatch} = useLikedHistoryWatchLater();
+  const { dispatch } = useLikedHistoryWatchLater();
 
   const save = () => {
     localStorage.setItem("key", JSON.stringify(inputNotes.current.value));
   };
 
   useEffect(() => {
-    inputNotes.current.value = JSON.parse(localStorage.getItem("key"))
-  }, [])
+    inputNotes.current.value = JSON.parse(localStorage.getItem("key"));
+  }, []);
 
   const videoSrc = {
     type: "video",
@@ -50,7 +50,10 @@ function VideoCardExpand({
           </p>
         </div>
         <div className="videoCardExpand__Buttons">
-          <button onClick={() => dispatch({type: "ADD_TO_LIKED", payload: id})} className="btn">
+          <button
+            onClick={() => dispatch({ type: "ADD_TO_LIKED", payload: id })}
+            className="btn"
+          >
             <img
               alt="btn"
               src={
@@ -60,7 +63,10 @@ function VideoCardExpand({
               }
             />
           </button>
-          <button onClick={() => dispatch({type: "REMOVE_FROM_LIKED", payload: id})} className="btn">
+          <button
+            onClick={() => dispatch({ type: "REMOVE_FROM_LIKED", payload: id })}
+            className="btn"
+          >
             <img
               alt="btn"
               src={
@@ -70,8 +76,10 @@ function VideoCardExpand({
               }
             />
           </button>
-          {console.log(state.likedArr)}
-          <button className="btn">
+          <button
+            onClick={() => dispatch({ type: "ADD_TO_WATCHLATER", payload: id })}
+            className="btn"
+          >
             <img
               alt="btn"
               src="https://raw.githubusercontent.com/rohan9896/Testing-for-CSS-component-library/b57630ad485a8ad95990506a9f8d00db49eb57bf/icons/videoLib/playlist.svg"
