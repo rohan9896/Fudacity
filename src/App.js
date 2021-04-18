@@ -7,8 +7,7 @@ import WatchPage from "./components/WatchPage/WatchPage";
 import { useLikedHistoryWatchLater } from "./Context/liked-history-watchLater-context";
 
 function App() {
-
-  const {state} = useLikedHistoryWatchLater();
+  const { state } = useLikedHistoryWatchLater();
 
   return (
     <>
@@ -23,33 +22,44 @@ function App() {
             </>
           }
         />
-        <Route path="/liked" element={
-          <>
-            <NavBar />
-          </>
-        } />
-        <Route path="/watch-later" element={
-          <>
-            <NavBar />
-          </>
-        } />
-        <Route path="/history" element={
-          <>
-            <NavBar />
-          </>
-        } />
-        {
-          state.allVideosArr.map(videoObj => {
-            return (
-              <Route key={videoObj.id} path={videoObj.id} element={
+        <Route
+          path="/liked"
+          element={
+            <>
+              <NavBar />
+            </>
+          }
+        />
+        <Route
+          path="/watch-later"
+          element={
+            <>
+              <NavBar />
+            </>
+          }
+        />
+        <Route
+          path="/history"
+          element={
+            <>
+              <NavBar />
+            </>
+          }
+        />
+        {state.allVideosArr.map((videoObj) => {
+          return (
+            <Route
+              key={videoObj.id}
+              path={videoObj.id}
+              element={
                 <>
                   <NavBar />
                   <WatchPage {...videoObj} />
                 </>
-              } />
-            )
-          })
-        }
+              }
+            />
+          );
+        })}
       </Routes>
     </>
   );

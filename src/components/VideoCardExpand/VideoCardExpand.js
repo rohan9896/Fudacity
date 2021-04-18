@@ -1,7 +1,7 @@
 import "./VideoCardExpand.css";
 import Plyr from "plyr-react";
 import "plyr-react/dist/plyr.css";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { useLikedHistoryWatchLater } from "../../Context/liked-history-watchLater-context";
 
 function VideoCardExpand({
@@ -21,6 +21,10 @@ function VideoCardExpand({
   const save = () => {
     localStorage.setItem("key", JSON.stringify(inputNotes.current.value));
   };
+
+  useEffect(() => {
+    inputNotes.current.value = JSON.parse(localStorage.getItem("key"))
+  }, [])
 
   const videoSrc = {
     type: "video",
