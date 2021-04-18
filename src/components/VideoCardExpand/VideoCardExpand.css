@@ -60,3 +60,8 @@
   font-size: x-large;
   margin: 1rem;
 }
+
+.saveBtn {
+  display: flex;
+  justify-content: center;
+}

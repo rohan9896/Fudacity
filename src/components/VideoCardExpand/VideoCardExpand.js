@@ -1,24 +1,24 @@
-import "./VideoCardExpand.css"
+import "./VideoCardExpand.css";
 import Plyr from "plyr-react";
 import "plyr-react/dist/plyr.css";
-import { useState, useEffect } from "react";
+import { useRef, useState } from "react";
 
 function VideoCardExpand() {
+  const inputNotes = useRef();
 
-  const [note, setNote] = useState(JSON.parse(localStorage.getItem("key")));
-
-  useEffect(() => {
-    localStorage.setItem("key", JSON.stringify(note));
-  }, [note])
+  const save = () => {
+    localStorage.setItem("key", JSON.stringify(inputNotes.current.value));
+    // console.log(inputNotes.current)
+  };
 
   const videoSrc = {
     type: "video",
     sources: [
       {
         src: "https://www.youtube.com/watch?v=_AyFP5s69N4",
-        provider: "youtube"
-      }
-    ]
+        provider: "youtube",
+      },
+    ],
   };
 
   return (
@@ -59,7 +59,15 @@ function VideoCardExpand() {
       </div>
       <div className="videoCardExpand__notesContainer">
         <h2>Take Notes</h2>
-        <textarea value={note} onChange={(e) => setNote(e.target.value)} className="videoCardExpand__notes"></textarea>
+        <textarea
+          ref={inputNotes}
+          className="videoCardExpand__notes"
+        ></textarea>
+      </div>
+      <div className="saveBtn">
+        <button className="primary-button black" onClick={save}>
+          Save
+        </button>
       </div>
     </div>
   );
