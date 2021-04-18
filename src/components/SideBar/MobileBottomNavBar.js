@@ -15,6 +15,7 @@ function MobileBottomNavBar() {
                 to={item.route}
                 activeStyle={{ fontWeight: "1000", color: "#3B82F6" }}
                 style={{ textDecoration: "none", color: "black" }}
+                key={item.id}
               >
                 <div className="videolibNav__item" key={item.id}>
                   <img

@@ -23,13 +23,25 @@ function App() {
             </>
           }
         />
-        <Route path="/liked" element={<h1>liked</h1>} />
-        <Route path="/watch-later" element={<h1>watch later</h1>} />
-        <Route path="/history" element={<h1>History</h1>} />
+        <Route path="/liked" element={
+          <>
+            <NavBar />
+          </>
+        } />
+        <Route path="/watch-later" element={
+          <>
+            <NavBar />
+          </>
+        } />
+        <Route path="/history" element={
+          <>
+            <NavBar />
+          </>
+        } />
         {
           state.allVideosArr.map(videoObj => {
             return (
-              <Route path={videoObj.id} element={
+              <Route key={videoObj.id} path={videoObj.id} element={
                 <>
                   <NavBar />
                   <WatchPage {...videoObj} />

@@ -13,6 +13,7 @@ function SideBar() {
             to={item.route}
             activeStyle={{ fontWeight: "1000", color: "#3B82F6" }}
             style={{ textDecoration: "none", color: "black" }}
+            key={item.id}
           >
             <div key={item.id} className="sideBar__item">
               <img className="ecomm__icon" src={item.icon} alt="cart" />
