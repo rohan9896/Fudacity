@@ -1,6 +1,7 @@
 import React from "react";
 import "./VideoCard.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Link } from "react-router-dom";
 
 function VideoCard({ id, thumbnail, title, videoLength, channel, channelImg }) {
   return (

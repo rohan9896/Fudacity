@@ -3,10 +3,13 @@
 
 .videoCard {
   font-family: "Poppins", sans-serif;
-  width: fit-content;
+  width: 370px;
   background-color: #ebecf0;
   cursor: pointer;
   max-width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .videoCard:hover {
@@ -16,11 +19,11 @@
 .videoCard__detailsContainer {
   display: flex;
   margin: 0 0.3rem;
-  padding: 1rem 0;
+  padding: 1rem 0.3rem;
   margin: 0;
   width: 25rem;
-  height: 3rem;
-  overflow-y: scroll;
+  height: fit-content;
+  align-items: center;
   max-width: 100%;
 }
 
