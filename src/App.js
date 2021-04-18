@@ -15,15 +15,10 @@ function App() {
 
 export default App;
 
-/* <CategoryScroller />
-<VideoCardGrid />
-<VideoCardExpand />
-<AdCard />
+/*
 <VideoSuggestionsCard
   thumbnail="https://img.youtube.com/vi/Wa6it7j_OHY/mqdefault.jpg"
   title="Learn useCallback In 8 Minutes"
   channel="WebDev Simplified"
   views={2.2}
-/>
-<VideoCard />
-<SideBar /> */
+/> */
