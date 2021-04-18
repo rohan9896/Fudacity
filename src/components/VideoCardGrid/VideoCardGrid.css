@@ -2,8 +2,16 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
 }
 
 .VideoCardGrid__item {
-    margin: 1.5rem;
+    margin: 0.5rem;
+}
+
+@media screen and (max-width: 850px) {
+    .VideoCardGrid__item {
+        margin: 0;
+    }
 }

@@ -3,10 +3,10 @@
 
 .sideBar__List {
   font-family: "Poppins", sans-serif;
-  margin: 0.5rem;
-  width: fit-content;
+  margin: 0;
   padding: 1rem;
-  border: 1px solid;
+  width: fit-content;
+  position: fixed;
 }
 
 .sideBar__item {

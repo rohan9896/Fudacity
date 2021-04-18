@@ -1,7 +1,7 @@
 import "./VideoCardExpand.css";
 import Plyr from "plyr-react";
 import "plyr-react/dist/plyr.css";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 function VideoCardExpand() {
   const inputNotes = useRef();
@@ -37,19 +37,19 @@ function VideoCardExpand() {
           </p>
         </div>
         <div className="videoCardExpand__Buttons">
-          <button class="icon-button">
+          <button className="icon-button">
             <img
               alt="btn"
               src="https://raw.githubusercontent.com/rohan9896/Testing-for-CSS-component-library/b57630ad485a8ad95990506a9f8d00db49eb57bf/icons/videoLib/like.svg"
             />
           </button>
-          <button class="icon-button">
+          <button className="icon-button">
             <img
               alt="btn"
               src="https://raw.githubusercontent.com/rohan9896/Testing-for-CSS-component-library/b57630ad485a8ad95990506a9f8d00db49eb57bf/icons/videoLib/dislike.svg"
             />
           </button>
-          <button class="icon-button">
+          <button className="icon-button">
             <img
               alt="btn"
               src="https://raw.githubusercontent.com/rohan9896/Testing-for-CSS-component-library/b57630ad485a8ad95990506a9f8d00db49eb57bf/icons/videoLib/playlist.svg"

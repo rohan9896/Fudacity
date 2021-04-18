@@ -1,6 +1,7 @@
 import React from "react";
 import "./CategoryScroller.css";
 import { v4 as uuid } from "uuid";
+import { useSelectedCategory } from "../../Context/selected-category-context";
 
 const categories = [
   {
@@ -34,17 +35,17 @@ const categories = [
     route: "/categories/javascript",
   },
   {
-    topic: "Competitive Programming",
+    topic: "CompetitiveProgramming",
     id: uuid(),
     route: "/categories/competitive-programming",
   },
   {
-    topic: "Machine Learning",
+    topic: "MachineLearning",
     id: uuid(),
     route: "/categories/machine-learning",
   },
   {
-    topic: "Data Science",
+    topic: "DataScience",
     id: uuid(),
     route: "/categories/data-science",
   },
@@ -54,23 +55,34 @@ const categories = [
     route: "/categories/blockchain",
   },
   {
-    topic: "Game Development",
+    topic: "GameDevelopment",
     id: uuid(),
     route: "/categories/game-development",
   },
   {
-    topic: "System Design",
+    topic: "SystemDesign",
     id: uuid(),
     route: "/categories/system-design",
   },
 ];
 
 function CategoryScroller() {
+  const { selectedCategory, setSelectedCategory } = useSelectedCategory();
+
   return (
     <div className="categoriesList">
       {categories.map((category) => {
         return (
-          <p className="category__Pill" key={category.id}>
+          <p
+            onClick={() => setSelectedCategory(category.topic)}
+            style={{
+              backgroundColor:
+                category.topic === selectedCategory ? "gray" : null,
+              color: category.topic === selectedCategory ? "white" : null,
+            }}
+            className="category__Pill"
+            key={category.id}
+          >
             {category.topic}
           </p>
         );

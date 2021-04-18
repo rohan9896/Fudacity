@@ -37,6 +37,12 @@
   color: gray;
 }
 
+.videoCardExpand__titleHeader,
+.videoCardExpand__title,
+.videoCardExpand__viewsAndDate {
+  margin: 0;
+}
+
 .videoCardExpand__Buttons {
   display: flex;
   align-items: flex-end;

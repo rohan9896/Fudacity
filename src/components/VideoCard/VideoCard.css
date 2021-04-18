@@ -6,6 +6,7 @@
   width: fit-content;
   background-color: #ebecf0;
   cursor: pointer;
+  max-width: 100%;
 }
 
 .videoCard:hover {
@@ -18,6 +19,9 @@
   padding: 1rem 0;
   margin: 0;
   width: 25rem;
+  height: 3rem;
+  overflow-y: scroll;
+  max-width: 100%;
 }
 
 .videoCard__titleContainer {
