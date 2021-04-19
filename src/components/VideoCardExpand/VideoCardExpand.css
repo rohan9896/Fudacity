@@ -55,7 +55,7 @@
 .btn {
   background-color: #ebecf0;
   padding: 0.5rem;
-  border: none;
+  margin: 0 0.2rem;
 }
 
 .btn > img {
