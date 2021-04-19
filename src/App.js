@@ -5,7 +5,7 @@ import LandingPage from "./components/LandingPage/LandingPage";
 import NavBar from "./components/NavBar/NavBar";
 import WatchPage from "./components/WatchPage/WatchPage";
 import { useLikedHistoryWatchLater } from "./Context/liked-history-watchLater-context";
-import LikedHistoryWatchLaterPage from "./components/LikedHistoryWatchLaterVideosPage/LikedHistoryWatchLaterVideosPage"
+import LikedHistoryWatchLaterPage from "./components/LikedHistoryWatchLaterVideosPage/LikedHistoryWatchLaterVideosPage";
 import ClearHistoryBtn from "./components/ClearHistoryBtn/ClearHistoryBtn";
 
 function App() {
@@ -29,7 +29,10 @@ function App() {
           element={
             <>
               <NavBar />
-              <LikedHistoryWatchLaterPage arrayToBeMapped={state.likedArr} />
+              <LikedHistoryWatchLaterPage
+                actionTypeOfCross="REMOVE_FROM_LIKED"
+                arrayToBeMapped={state.likedArr}
+              />
             </>
           }
         />
@@ -38,7 +41,10 @@ function App() {
           element={
             <>
               <NavBar />
-              <LikedHistoryWatchLaterPage arrayToBeMapped={state.watchLaterArr} />
+              <LikedHistoryWatchLaterPage
+                actionTypeOfCross="REMOVE_FROM_WATCHLATER"
+                arrayToBeMapped={state.watchLaterArr}
+              />
             </>
           }
         />
@@ -48,7 +54,10 @@ function App() {
             <>
               <NavBar />
               <ClearHistoryBtn />
-              <LikedHistoryWatchLaterPage arrayToBeMapped={state.historyArr} />
+              <LikedHistoryWatchLaterPage
+                actionTypeOfCross="REMOVE_FROM_HISTORY"
+                arrayToBeMapped={state.historyArr}
+              />
             </>
           }
         />

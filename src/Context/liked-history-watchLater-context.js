@@ -11,6 +11,7 @@ const actionTypes = {
   REMOVE_FROM_WATCHLATER: "REMOVE_FROM_WATCHLATER",
   ADD_TO_LIKED: "ADD_TO_LIKED",
   REMOVE_FROM_LIKED: "REMOVE_FROM_LIKED",
+  TOGGLE_DISLIKED: "TOGGLE_DISLIKED",
 };
 
 function generateAllCategoriesVideos() {
@@ -65,9 +66,7 @@ const reducerFunction = (state, action) => {
           ),
         ],
         allVideosArr: state.allVideosArr.map((video) =>
-          video.id === action.payload
-            ? { ...video, liked: true, disliked: false }
-            : video
+          video.id === action.payload ? { ...video, liked: true } : video
         ),
       };
     case actionTypes.REMOVE_FROM_LIKED:
@@ -75,8 +74,15 @@ const reducerFunction = (state, action) => {
         ...state,
         likedArr: state.likedArr.filter((video) => video.id !== action.payload),
         allVideosArr: state.allVideosArr.map((video) =>
+          video.id === action.payload ? { ...video, liked: false } : video
+        ),
+      };
+    case actionTypes.TOGGLE_DISLIKED:
+      return {
+        ...state,
+        allVideosArr: state.allVideosArr.map((video) =>
           video.id === action.payload
-            ? { ...video, liked: false, disliked: true }
+            ? { ...video, disliked: !video.disliked }
             : video
         ),
       };
@@ -106,8 +112,12 @@ const reducerFunction = (state, action) => {
 export default function LikedHistoryWatchLaterProvider({ children }) {
   const [state, dispatch] = useReducer(reducerFunction, initialState);
 
+  const isVideoLiked = (id) => state.likedArr.some((video) => video.id === id);
+
   return (
-    <LikedHistoryWatchLaterContext.Provider value={{ state, dispatch }}>
+    <LikedHistoryWatchLaterContext.Provider
+      value={{ state, dispatch, isVideoLiked }}
+    >
       {children}
     </LikedHistoryWatchLaterContext.Provider>
   );

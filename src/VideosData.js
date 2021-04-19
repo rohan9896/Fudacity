@@ -1,3 +1,7 @@
+import faker from "faker";
+
+faker.seed(123);
+
 function generateVideosData() {
   const DSA = [
     {
@@ -11,7 +15,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s68-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=8hly31xKli0",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "92S4zgXN17o",
@@ -23,7 +29,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnjxmp9I5SL4FJUX1HWlg0k3jZVimZ6aNmuhPDJL=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=92S4zgXN17o",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "z9bZufPHFLU",
@@ -36,7 +44,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwniWFbtX2drltDWOBZGP1KhLVTqDypqg4oQPK7Pc=s176-c-k-c0x00ffffff-no-rj-mo",
       link: "https://www.youtube.com/watch?v=z9bZufPHFLU",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "F8xQ5joLlD0",
@@ -48,7 +58,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnhIfHbN8Ucj_OEERe0uOsOHFJh9Giw_XFDP6dm_=s176-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=F8xQ5joLlD0",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
   ];
 
@@ -64,7 +76,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnihtV8Mb0JZFkkAEf9KKN4m4WNNeHkxUb6Wuvc_5w=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=_Gpe1Zn-1fE",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "_I94-tJlovg",
@@ -76,7 +90,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnjFFW-urVXeyl9vnyQ3tvHp4LsffPZLRjIQ9W3vkA=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=_I94-tJlovg",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "S_0q75eD8Yc",
@@ -89,7 +105,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwni7i_dF9urC5uwdLIRQU89f5H4krFAgJgywql8kiA=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=S_0q75eD8Yc",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "F8xQ5joLlD0",
@@ -101,7 +119,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnhIfHbN8Ucj_OEERe0uOsOHFJh9Giw_XFDP6dm_=s176-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=F8xQ5joLlD0",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
   ];
 
@@ -117,7 +137,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s68-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=8hly31xKli0",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "92S4zgXN17o",
@@ -129,7 +151,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnjxmp9I5SL4FJUX1HWlg0k3jZVimZ6aNmuhPDJL=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=92S4zgXN17o",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "z9bZufPHFLU",
@@ -142,7 +166,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwniWFbtX2drltDWOBZGP1KhLVTqDypqg4oQPK7Pc=s176-c-k-c0x00ffffff-no-rj-mo",
       link: "https://www.youtube.com/watch?v=z9bZufPHFLU",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "F8xQ5joLlD0",
@@ -154,7 +180,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnhIfHbN8Ucj_OEERe0uOsOHFJh9Giw_XFDP6dm_=s176-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=F8xQ5joLlD0",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
   ];
 
@@ -170,7 +198,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s68-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=8hly31xKli0",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "92S4zgXN17o",
@@ -182,7 +212,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnjxmp9I5SL4FJUX1HWlg0k3jZVimZ6aNmuhPDJL=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=92S4zgXN17o",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "z9bZufPHFLU",
@@ -195,7 +227,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwniWFbtX2drltDWOBZGP1KhLVTqDypqg4oQPK7Pc=s176-c-k-c0x00ffffff-no-rj-mo",
       link: "https://www.youtube.com/watch?v=z9bZufPHFLU",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "F8xQ5joLlD0",
@@ -207,7 +241,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnhIfHbN8Ucj_OEERe0uOsOHFJh9Giw_XFDP6dm_=s176-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=F8xQ5joLlD0",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
   ];
 
@@ -223,7 +259,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s68-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=8hly31xKli0",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "92S4zgXN17o",
@@ -235,7 +273,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnjxmp9I5SL4FJUX1HWlg0k3jZVimZ6aNmuhPDJL=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=92S4zgXN17o",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "z9bZufPHFLU",
@@ -248,7 +288,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwniWFbtX2drltDWOBZGP1KhLVTqDypqg4oQPK7Pc=s176-c-k-c0x00ffffff-no-rj-mo",
       link: "https://www.youtube.com/watch?v=z9bZufPHFLU",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "F8xQ5joLlD0",
@@ -260,7 +302,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnhIfHbN8Ucj_OEERe0uOsOHFJh9Giw_XFDP6dm_=s176-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=F8xQ5joLlD0",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
   ];
 
@@ -276,7 +320,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s68-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=8hly31xKli0",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "92S4zgXN17o",
@@ -288,7 +334,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnjxmp9I5SL4FJUX1HWlg0k3jZVimZ6aNmuhPDJL=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=92S4zgXN17o",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "z9bZufPHFLU",
@@ -301,7 +349,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwniWFbtX2drltDWOBZGP1KhLVTqDypqg4oQPK7Pc=s176-c-k-c0x00ffffff-no-rj-mo",
       link: "https://www.youtube.com/watch?v=z9bZufPHFLU",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "F8xQ5joLlD0",
@@ -313,7 +363,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnhIfHbN8Ucj_OEERe0uOsOHFJh9Giw_XFDP6dm_=s176-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=F8xQ5joLlD0",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
   ];
 
@@ -329,7 +381,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s68-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=8hly31xKli0",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "92S4zgXN17o",
@@ -341,7 +395,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnjxmp9I5SL4FJUX1HWlg0k3jZVimZ6aNmuhPDJL=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=92S4zgXN17o",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "z9bZufPHFLU",
@@ -354,7 +410,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwniWFbtX2drltDWOBZGP1KhLVTqDypqg4oQPK7Pc=s176-c-k-c0x00ffffff-no-rj-mo",
       link: "https://www.youtube.com/watch?v=z9bZufPHFLU",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "F8xQ5joLlD0",
@@ -366,7 +424,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnhIfHbN8Ucj_OEERe0uOsOHFJh9Giw_XFDP6dm_=s176-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=F8xQ5joLlD0",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
   ];
 
@@ -382,7 +442,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s68-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=8hly31xKli0",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "92S4zgXN17o",
@@ -394,7 +456,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnjxmp9I5SL4FJUX1HWlg0k3jZVimZ6aNmuhPDJL=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=92S4zgXN17o",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "z9bZufPHFLU",
@@ -407,7 +471,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwniWFbtX2drltDWOBZGP1KhLVTqDypqg4oQPK7Pc=s176-c-k-c0x00ffffff-no-rj-mo",
       link: "https://www.youtube.com/watch?v=z9bZufPHFLU",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "F8xQ5joLlD0",
@@ -419,7 +485,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnhIfHbN8Ucj_OEERe0uOsOHFJh9Giw_XFDP6dm_=s176-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=F8xQ5joLlD0",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
   ];
 
@@ -435,7 +503,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s68-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=8hly31xKli0",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "92S4zgXN17o",
@@ -447,7 +517,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnjxmp9I5SL4FJUX1HWlg0k3jZVimZ6aNmuhPDJL=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=92S4zgXN17o",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "z9bZufPHFLU",
@@ -460,7 +532,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwniWFbtX2drltDWOBZGP1KhLVTqDypqg4oQPK7Pc=s176-c-k-c0x00ffffff-no-rj-mo",
       link: "https://www.youtube.com/watch?v=z9bZufPHFLU",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "F8xQ5joLlD0",
@@ -472,7 +546,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnhIfHbN8Ucj_OEERe0uOsOHFJh9Giw_XFDP6dm_=s176-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=F8xQ5joLlD0",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
   ];
 
@@ -488,7 +564,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s68-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=8hly31xKli0",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "92S4zgXN17o",
@@ -500,7 +578,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnjxmp9I5SL4FJUX1HWlg0k3jZVimZ6aNmuhPDJL=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=92S4zgXN17o",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "z9bZufPHFLU",
@@ -513,7 +593,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwniWFbtX2drltDWOBZGP1KhLVTqDypqg4oQPK7Pc=s176-c-k-c0x00ffffff-no-rj-mo",
       link: "https://www.youtube.com/watch?v=z9bZufPHFLU",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "F8xQ5joLlD0",
@@ -525,7 +607,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnhIfHbN8Ucj_OEERe0uOsOHFJh9Giw_XFDP6dm_=s176-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=F8xQ5joLlD0",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
   ];
 
@@ -541,7 +625,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnifaQZvAunS0OFb2y_cieoVjLCVjqQW8Exf3BC1gg=s68-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=8hly31xKli0",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "92S4zgXN17o",
@@ -553,7 +639,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnjxmp9I5SL4FJUX1HWlg0k3jZVimZ6aNmuhPDJL=s88-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=92S4zgXN17o",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "z9bZufPHFLU",
@@ -566,7 +654,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwniWFbtX2drltDWOBZGP1KhLVTqDypqg4oQPK7Pc=s176-c-k-c0x00ffffff-no-rj-mo",
       link: "https://www.youtube.com/watch?v=z9bZufPHFLU",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
     {
       id: "F8xQ5joLlD0",
@@ -578,7 +668,9 @@ function generateVideosData() {
         "https://yt3.ggpht.com/ytc/AAUvwnhIfHbN8Ucj_OEERe0uOsOHFJh9Giw_XFDP6dm_=s176-c-k-c0x00ffffff-no-rj",
       link: "https://www.youtube.com/watch?v=F8xQ5joLlD0",
       liked: false,
-      disliked: false
+      disliked: false,
+      views: faker.datatype.number(999),
+      monthsAgo: faker.datatype.number(12)
     },
   ];
   return {

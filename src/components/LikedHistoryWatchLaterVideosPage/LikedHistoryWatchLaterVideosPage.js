@@ -1,10 +1,13 @@
 import React from "react";
-import "../LandingPage/LandingPage.css"
+import "../LandingPage/LandingPage.css";
 import VideoCardGrid from "../VideoCardGrid/VideoCardGrid";
 import SideBar from "../SideBar/SideBar";
-import MobileBottomNavBar from "../SideBar/MobileBottomNavBar"
+import MobileBottomNavBar from "../SideBar/MobileBottomNavBar";
 
-function LikedVideosPage({arrayToBeMapped}) {
+function LikedHistoryWatchLaterVideosPage({
+  arrayToBeMapped,
+  actionTypeOfCross,
+}) {
   return (
     <>
       <div className="wrapper">
@@ -14,7 +17,7 @@ function LikedVideosPage({arrayToBeMapped}) {
         <div>
           <VideoCardGrid
             cross={true}
-            actionTypeOfCross="REMOVE_FROM_LIKED"
+            actionTypeOfCross={actionTypeOfCross}
             arrayToBeMapped={arrayToBeMapped}
           />
         </div>
@@ -26,4 +29,4 @@ function LikedVideosPage({arrayToBeMapped}) {
   );
 }
 
-export default LikedVideosPage;
+export default LikedHistoryWatchLaterVideosPage;

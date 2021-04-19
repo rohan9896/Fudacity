@@ -1,8 +1,7 @@
 import "./VideoCardExpand.css";
-import Plyr from "plyr-react";
-import "plyr-react/dist/plyr.css";
 import { useRef, useEffect } from "react";
 import { useLikedHistoryWatchLater } from "../../Context/liked-history-watchLater-context";
+import ReactPlayer from "react-player";
 
 function VideoCardExpand({
   id,
@@ -14,9 +13,11 @@ function VideoCardExpand({
   link,
   liked,
   disliked,
+  views,
+  monthsAgo,
 }) {
   const inputNotes = useRef();
-  const { dispatch } = useLikedHistoryWatchLater();
+  const { dispatch, isVideoLiked } = useLikedHistoryWatchLater();
 
   const save = () => {
     localStorage.setItem("key", JSON.stringify(inputNotes.current.value));
@@ -26,32 +27,32 @@ function VideoCardExpand({
     inputNotes.current.value = JSON.parse(localStorage.getItem("key"));
   }, []);
 
-  const videoSrc = {
-    type: "video",
-    sources: [
-      {
-        src: link,
-        provider: "youtube",
-      },
-    ],
-  };
-
   return (
     <div className="videoCardExpand">
-      <div className="videoCardExpand__video">
-        <Plyr source={videoSrc} />
+      <div className="videoCardExpand__videoWrapper">
+        <ReactPlayer
+          controls
+          width="100%"
+          height="100%"
+          className="react-player"
+          url={link}
+        />
       </div>
       <div className="videoCardExpand__details">
         <div>
           <p className="videoCardExpand__title">{title}</p>
           <p className="videoCardExpand__viewsAndDate">
-            <strong>{channel}</strong> | {Math.ceil(Math.random() * 999)}k views
-            | {Math.ceil(Math.random() * 12)} months ago
+            <strong>{channel}</strong> | {views}k views | {monthsAgo} months ago
           </p>
         </div>
         <div className="videoCardExpand__Buttons">
           <button
-            onClick={() => dispatch({ type: "ADD_TO_LIKED", payload: id })}
+            onClick={() =>
+              dispatch({
+                type: isVideoLiked(id) ? "REMOVE_FROM_LIKED" : "ADD_TO_LIKED",
+                payload: id,
+              })
+            }
             className="btn"
           >
             <img
@@ -64,7 +65,7 @@ function VideoCardExpand({
             />
           </button>
           <button
-            onClick={() => dispatch({ type: "REMOVE_FROM_LIKED", payload: id })}
+            onClick={() => dispatch({ type: "TOGGLE_DISLIKED", payload: id })}
             className="btn"
           >
             <img

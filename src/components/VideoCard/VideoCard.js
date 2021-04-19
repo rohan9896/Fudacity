@@ -11,6 +11,8 @@ function VideoCard({
   videoLength,
   channel,
   channelImg,
+  views,
+  monthsAgo,
   cross,
   actionTypeOfCross,
 }) {
@@ -50,9 +52,7 @@ function VideoCard({
             <div className="videoCard__titleContainer">
               <span className="videoCard__title">{title}</span>
               <span className="videoCard__secondTitle">
-                {`${channel} | ${Math.ceil(
-                  Math.random() * 999
-                )}k views | ${Math.ceil(Math.random() * 12)} months ago`}
+                {`${channel} | ${views}k views | ${monthsAgo} months ago`}
               </span>
             </div>
           </Link>
