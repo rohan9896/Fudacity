@@ -1,4 +1,4 @@
-.landingPage__wrapper {
+.wrapper {
     display: grid;
     grid-template-columns: 1fr 5fr;
 }
@@ -7,7 +7,7 @@
     .sideBar {
         display: none;
     }
-    .landingPage__wrapper {
+    .wrapper {
         display: flex;
         flex-direction: column;
     }

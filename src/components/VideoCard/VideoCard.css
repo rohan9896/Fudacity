@@ -20,12 +20,16 @@
 .videoCard__detailsContainer {
   display: flex;
   margin: 0 0.3rem;
-  padding: 1rem 0.3rem;
+  padding: 0.4rem 0.3rem;
   margin: 0;
   width: 25rem;
   height: fit-content;
   align-items: center;
   max-width: 100%;
+}
+
+.videoCard__channelIcon {
+  padding: 0 0.2rem;
 }
 
 .videoCard__titleContainer {

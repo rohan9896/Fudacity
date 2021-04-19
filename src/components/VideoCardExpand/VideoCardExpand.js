@@ -45,7 +45,7 @@ function VideoCardExpand({
         <div>
           <p className="videoCardExpand__title">{title}</p>
           <p className="videoCardExpand__viewsAndDate">
-            <strong>{channel}</strong> | {Math.ceil(Math.random() * 999)} views
+            <strong>{channel}</strong> | {Math.ceil(Math.random() * 999)}k views
             | {Math.ceil(Math.random() * 12)} months ago
           </p>
         </div>

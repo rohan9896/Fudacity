@@ -3,7 +3,7 @@ import "./VideoCardGrid.css";
 import VideoCard from "../VideoCard/VideoCard";
 import { useLikedHistoryWatchLater } from "../../Context/liked-history-watchLater-context";
 
-function VideoCardGrid({ arrayToBeMapped }) {
+function VideoCardGrid({ arrayToBeMapped, cross, actionTypeOfCross }) {
   const { dispatch } = useLikedHistoryWatchLater();
 
   return (
@@ -17,7 +17,7 @@ function VideoCardGrid({ arrayToBeMapped }) {
               }
               className="VideoCardGrid__item"
             >
-              <VideoCard id={item.id} {...item} />
+              <VideoCard cross={cross} actionTypeOfCross={actionTypeOfCross} id={item.id} {...item} />
             </div>
           );
         })}

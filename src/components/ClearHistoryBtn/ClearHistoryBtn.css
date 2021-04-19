@@ -1,0 +1,13 @@
+@import url("https://effortlessui.netlify.app/base.css");
+
+.clearHistoryBtn__container {
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (max-width: 800px) {
+    .clearHistoryBtn__container {
+        justify-content: center;
+    }
+}

@@ -16,7 +16,7 @@ function LandingPage() {
       : state.categoryArr[selectedCategory];
 
   return (
-    <div className="landingPage__wrapper">
+    <div className="wrapper">
       <div className="sideBar">
         <SideBar />
       </div>

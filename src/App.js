@@ -5,6 +5,8 @@ import LandingPage from "./components/LandingPage/LandingPage";
 import NavBar from "./components/NavBar/NavBar";
 import WatchPage from "./components/WatchPage/WatchPage";
 import { useLikedHistoryWatchLater } from "./Context/liked-history-watchLater-context";
+import LikedHistoryWatchLaterPage from "./components/LikedHistoryWatchLaterVideosPage/LikedHistoryWatchLaterVideosPage"
+import ClearHistoryBtn from "./components/ClearHistoryBtn/ClearHistoryBtn";
 
 function App() {
   const { state } = useLikedHistoryWatchLater();
@@ -27,6 +29,7 @@ function App() {
           element={
             <>
               <NavBar />
+              <LikedHistoryWatchLaterPage arrayToBeMapped={state.likedArr} />
             </>
           }
         />
@@ -35,6 +38,7 @@ function App() {
           element={
             <>
               <NavBar />
+              <LikedHistoryWatchLaterPage arrayToBeMapped={state.watchLaterArr} />
             </>
           }
         />
@@ -43,6 +47,8 @@ function App() {
           element={
             <>
               <NavBar />
+              <ClearHistoryBtn />
+              <LikedHistoryWatchLaterPage arrayToBeMapped={state.historyArr} />
             </>
           }
         />
