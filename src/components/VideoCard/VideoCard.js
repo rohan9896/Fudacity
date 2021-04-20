@@ -18,6 +18,13 @@ function VideoCard({
 }) {
   const { dispatch } = useLikedHistoryWatchLater();
 
+  const overflowProcessedString = (str, wordExceedLimit) => {
+    if (str.length > wordExceedLimit) {
+      return str.substring(0, wordExceedLimit - 2) + "...";
+    }
+    return str;
+  };
+
   return (
     <>
       <div key={id} className="videoCard">
@@ -50,9 +57,14 @@ function VideoCard({
             style={{ textDecoration: "none", color: "black" }}
           >
             <div className="videoCard__titleContainer">
-              <span className="videoCard__title">{title}</span>
+              <p className="videoCard__title">
+                {overflowProcessedString(title, 35)}
+              </p>
               <span className="videoCard__secondTitle">
-                {`${channel} | ${views}k views | ${monthsAgo} months ago`}
+                {overflowProcessedString(
+                  `${channel} | ${views}k views | ${monthsAgo} months ago`,
+                  43
+                )}
               </span>
             </div>
           </Link>

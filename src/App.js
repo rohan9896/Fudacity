@@ -7,6 +7,7 @@ import WatchPage from "./components/WatchPage/WatchPage";
 import { useLikedHistoryWatchLater } from "./Context/liked-history-watchLater-context";
 import LikedHistoryWatchLaterPage from "./components/LikedHistoryWatchLaterVideosPage/LikedHistoryWatchLaterVideosPage";
 import ClearHistoryBtn from "./components/ClearHistoryBtn/ClearHistoryBtn";
+import NoVideosFoundPage from "./components/NoVideosFoundPage/NoVideosFoundPage";
 
 function App() {
   const { state } = useLikedHistoryWatchLater();
@@ -29,10 +30,14 @@ function App() {
           element={
             <>
               <NavBar />
-              <LikedHistoryWatchLaterPage
-                actionTypeOfCross="REMOVE_FROM_LIKED"
-                arrayToBeMapped={state.likedArr}
-              />
+              {state.likedArr.length === 0 ? (
+                <NoVideosFoundPage />
+              ) : (
+                <LikedHistoryWatchLaterPage
+                  actionTypeOfCross="REMOVE_FROM_LIKED"
+                  arrayToBeMapped={state.likedArr}
+                />
+              )}
             </>
           }
         />
@@ -41,10 +46,14 @@ function App() {
           element={
             <>
               <NavBar />
-              <LikedHistoryWatchLaterPage
-                actionTypeOfCross="REMOVE_FROM_WATCHLATER"
-                arrayToBeMapped={state.watchLaterArr}
-              />
+              {state.watchLaterArr.length === 0 ? (
+                <NoVideosFoundPage />
+              ) : (
+                <LikedHistoryWatchLaterPage
+                  actionTypeOfCross="REMOVE_FROM_WATCHLATER"
+                  arrayToBeMapped={state.watchLaterArr}
+                />
+              )}
             </>
           }
         />
@@ -53,11 +62,17 @@ function App() {
           element={
             <>
               <NavBar />
-              <ClearHistoryBtn />
-              <LikedHistoryWatchLaterPage
-                actionTypeOfCross="REMOVE_FROM_HISTORY"
-                arrayToBeMapped={state.historyArr}
-              />
+              {state.historyArr.length === 0 ? (
+                <NoVideosFoundPage />
+              ) : (
+                <>
+                  <ClearHistoryBtn />
+                  <LikedHistoryWatchLaterPage
+                    actionTypeOfCross="REMOVE_FROM_HISTORY"
+                    arrayToBeMapped={state.historyArr}
+                  />
+                </>
+              )}
             </>
           }
         />

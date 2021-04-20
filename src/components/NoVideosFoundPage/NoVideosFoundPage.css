@@ -1,0 +1,21 @@
+@import url("https://effortlessui.netlify.app/base.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.NoVideoFoundPage__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+}
+
+.NoVideoFoundPage__container > img {
+  width: 216px;
+}
+
+@media screen and (min-width: 768px) {
+  .NoVideoFoundPage__container > img {
+    width: 324px;
+  }
+}

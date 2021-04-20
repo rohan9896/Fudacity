@@ -14,7 +14,7 @@
 }
 
 .videoCard:hover {
-    border: rgb(199, 189, 189) 1px solid;
+  border: rgb(199, 189, 189) 1px solid;
 }
 
 .videoCard__detailsContainer {
@@ -44,11 +44,12 @@
 }
 
 .videoCard__title {
-    font-weight: 900;
+  font-weight: 900;
+  margin: 0;
 }
 
 .videoCard__secondTitle {
-    font-size: smaller;
+  font-size: smaller;
 }
 
 .videoCard__thumbnail {
