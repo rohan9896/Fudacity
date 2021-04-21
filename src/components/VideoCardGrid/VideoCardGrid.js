@@ -12,12 +12,13 @@ function VideoCardGrid({ arrayToBeMapped, cross, actionTypeOfCross }) {
         {arrayToBeMapped.map((item) => {
           return (
             <div
+            key={item.id}
               onClick={() =>
                 dispatch({ type: "ADD_TO_HISTORY", payload: item.id })
               }
               className="VideoCardGrid__item"
             >
-              <VideoCard cross={cross} actionTypeOfCross={actionTypeOfCross} id={item.id} {...item} />
+              <VideoCard cross={cross} actionTypeOfCross={actionTypeOfCross} {...item} />
             </div>
           );
         })}

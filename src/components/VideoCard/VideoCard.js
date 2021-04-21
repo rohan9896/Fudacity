@@ -72,7 +72,7 @@ function VideoCard({
         <span
           onClick={() =>
             dispatch({
-              type: actionTypeOfCross ? actionTypeOfCross : "",
+              type: actionTypeOfCross ? actionTypeOfCross : null,
               payload: id,
             })
           }

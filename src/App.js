@@ -36,6 +36,7 @@ function App() {
                 <LikedHistoryWatchLaterPage
                   actionTypeOfCross="REMOVE_FROM_LIKED"
                   arrayToBeMapped={state.likedArr}
+                  cross
                 />
               )}
             </>
@@ -52,6 +53,7 @@ function App() {
                 <LikedHistoryWatchLaterPage
                   actionTypeOfCross="REMOVE_FROM_WATCHLATER"
                   arrayToBeMapped={state.watchLaterArr}
+                  cross
                 />
               )}
             </>

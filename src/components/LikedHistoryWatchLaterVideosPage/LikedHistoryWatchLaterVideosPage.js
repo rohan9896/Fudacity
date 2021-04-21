@@ -5,6 +5,7 @@ import SideBar from "../SideBar/SideBar";
 import MobileBottomNavBar from "../SideBar/MobileBottomNavBar";
 
 function LikedHistoryWatchLaterVideosPage({
+  cross,
   arrayToBeMapped,
   actionTypeOfCross,
 }) {
@@ -16,7 +17,7 @@ function LikedHistoryWatchLaterVideosPage({
         </div>
         <div>
           <VideoCardGrid
-            cross={true}
+            cross={cross}
             actionTypeOfCross={actionTypeOfCross}
             arrayToBeMapped={arrayToBeMapped}
           />

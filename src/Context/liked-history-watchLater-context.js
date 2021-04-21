@@ -5,7 +5,6 @@ export const LikedHistoryWatchLaterContext = createContext();
 
 const actionTypes = {
   ADD_TO_HISTORY: "ADD_TO_HISTORY",
-  REMOVE_FROM_HISTORY: "REMOVE_FROM_HISTORY",
   CLEAR_HISTORY: "CLEAR_HISTORY",
   ADD_TO_WATCHLATER: "ADD_TO_WATCHLATER",
   REMOVE_FROM_WATCHLATER: "REMOVE_FROM_WATCHLATER",
@@ -33,21 +32,12 @@ const initialState = {
 const reducerFunction = (state, action) => {
   switch (action.type) {
     case actionTypes.ADD_TO_HISTORY:
+      if (state.historyArr.some((video) => video.id === action.payload))
+        return state;
       return {
         ...state,
-        historyArr: [
-          ...new Set(
-            state.historyArr.concat(
-              state.allVideosArr.filter((video) => video.id === action.payload)
-            )
-          ),
-        ],
-      };
-    case actionTypes.REMOVE_FROM_HISTORY:
-      return {
-        ...state,
-        historyArr: state.historyArr.filter(
-          (video) => video.id !== action.payload
+        historyArr: state.historyArr.concat(
+          state.allVideosArr.filter((video) => video.id === action.payload)
         ),
       };
     case actionTypes.CLEAR_HISTORY:
@@ -56,15 +46,13 @@ const reducerFunction = (state, action) => {
         historyArr: [],
       };
     case actionTypes.ADD_TO_LIKED:
+      if (state.likedArr.some((video) => video.id === action.payload))
+        return state;
       return {
         ...state,
-        likedArr: [
-          ...new Set(
-            state.likedArr.concat(
-              state.allVideosArr.filter((video) => video.id === action.payload)
-            )
-          ),
-        ],
+        likedArr: state.likedArr.concat(
+          state.allVideosArr.filter((video) => video.id === action.payload)
+        ),
         allVideosArr: state.allVideosArr.map((video) =>
           video.id === action.payload ? { ...video, liked: true } : video
         ),
@@ -87,15 +75,13 @@ const reducerFunction = (state, action) => {
         ),
       };
     case actionTypes.ADD_TO_WATCHLATER:
+      if (state.likedArr.some((video) => video.id === action.payload))
+        return state;
       return {
         ...state,
-        watchLaterArr: [
-          ...new Set(
-            state.watchLaterArr.concat(
-              state.allVideosArr.filter((video) => video.id === action.payload)
-            )
-          ),
-        ],
+        watchLaterArr: state.watchLaterArr.concat(
+          state.allVideosArr.filter((video) => video.id === action.payload)
+        ),
       };
     case actionTypes.REMOVE_FROM_WATCHLATER:
       return {
