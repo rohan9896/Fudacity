@@ -2,6 +2,8 @@ import "./VideoCardExpand.css";
 import { useRef, useEffect } from "react";
 import { useLikedHistoryWatchLater } from "../../Context/liked-history-watchLater-context";
 import ReactPlayer from "react-player";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function VideoCardExpand({
   id,
@@ -17,10 +19,15 @@ function VideoCardExpand({
   monthsAgo,
 }) {
   const inputNotes = useRef();
-  const { dispatch, isVideoLiked } = useLikedHistoryWatchLater();
+  const {
+    dispatch,
+    isVideoLiked,
+    isVideoInWatchLater,
+  } = useLikedHistoryWatchLater();
 
   const save = () => {
     localStorage.setItem("key", JSON.stringify(inputNotes.current.value));
+    toast.success("Saved");
   };
 
   useEffect(() => {
@@ -47,12 +54,15 @@ function VideoCardExpand({
         </div>
         <div className="videoCardExpand__Buttons">
           <button
-            onClick={() =>
+            onClick={() => {
               dispatch({
                 type: isVideoLiked(id) ? "REMOVE_FROM_LIKED" : "ADD_TO_LIKED",
                 payload: id,
-              })
-            }
+              });
+              isVideoLiked(id)
+                ? toast.warning("Removed from liked")
+                : toast.success("Added to liked");
+            }}
             className="btn"
           >
             <img
@@ -65,7 +75,9 @@ function VideoCardExpand({
             />
           </button>
           <button
-            onClick={() => dispatch({ type: "TOGGLE_DISLIKED", payload: id })}
+            onClick={() => {
+              dispatch({ type: "TOGGLE_DISLIKED", payload: id });
+            }}
             className="btn"
           >
             <img
@@ -78,7 +90,12 @@ function VideoCardExpand({
             />
           </button>
           <button
-            onClick={() => dispatch({ type: "ADD_TO_WATCHLATER", payload: id })}
+            onClick={() => {
+              dispatch({ type: "ADD_TO_WATCHLATER", payload: id });
+              isVideoInWatchLater(id)
+                ? toast.info("Already in watch later")
+                : toast.success("Added to watch later");
+            }}
             className="btn"
           >
             <img
@@ -100,6 +117,7 @@ function VideoCardExpand({
           Save
         </button>
       </div>
+      <ToastContainer autoClose={1500} />
     </div>
   );
 }

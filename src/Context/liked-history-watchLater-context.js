@@ -75,7 +75,7 @@ const reducerFunction = (state, action) => {
         ),
       };
     case actionTypes.ADD_TO_WATCHLATER:
-      if (state.likedArr.some((video) => video.id === action.payload))
+      if (state.watchLaterArr.some((video) => video.id === action.payload))
         return state;
       return {
         ...state,
@@ -99,10 +99,11 @@ export default function LikedHistoryWatchLaterProvider({ children }) {
   const [state, dispatch] = useReducer(reducerFunction, initialState);
 
   const isVideoLiked = (id) => state.likedArr.some((video) => video.id === id);
+  const isVideoInWatchLater = (id) => state.watchLaterArr.some(video => video.id === id);
 
   return (
     <LikedHistoryWatchLaterContext.Provider
-      value={{ state, dispatch, isVideoLiked }}
+      value={{ state, dispatch, isVideoLiked, isVideoInWatchLater }}
     >
       {children}
     </LikedHistoryWatchLaterContext.Provider>
