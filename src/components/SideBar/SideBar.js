@@ -11,7 +11,7 @@ function SideBar() {
           <NavLink
             end
             to={item.route}
-            activeStyle={{ fontWeight: "1000", color: "#3B82F6" }}
+            activeStyle={{ fontWeight: "700", fontFamily: "Arial Black" }}
             style={{ textDecoration: "none", color: "black" }}
             key={item.id}
           >
