@@ -26,13 +26,13 @@ function VideoCardExpand({
   } = useLikedHistoryWatchLater();
 
   const save = () => {
-    localStorage.setItem("key", JSON.stringify(inputNotes.current.value));
+    localStorage.setItem(id, JSON.stringify(inputNotes.current.value));
     toast.success("Saved");
   };
 
   useEffect(() => {
-    inputNotes.current.value = JSON.parse(localStorage.getItem("key"));
-  }, []);
+    inputNotes.current.value = JSON.parse(localStorage.getItem(id));
+  });
 
   return (
     <div className="videoCardExpand">

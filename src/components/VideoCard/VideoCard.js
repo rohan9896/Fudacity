@@ -58,7 +58,7 @@ function VideoCard({
           >
             <div className="videoCard__titleContainer">
               <p className="videoCard__title">
-                {overflowProcessedString(title, 35)}
+                {overflowProcessedString(title, 34)}
               </p>
               <span className="videoCard__secondTitle">
                 {overflowProcessedString(
