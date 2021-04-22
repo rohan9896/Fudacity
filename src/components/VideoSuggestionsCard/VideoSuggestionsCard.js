@@ -1,7 +1,7 @@
 import React from "react";
 import "./VideoSuggestionsCard.css";
 
-function VideoSuggestionsCard({thumbnail, title, channel, views, monthsAgo}) {
+function VideoSuggestionsCard({id, link, thumbnail, title, channel, views, monthsAgo}) {
   return (
     <div className="videoSuggestionsCard">
       <img
@@ -15,7 +15,7 @@ function VideoSuggestionsCard({thumbnail, title, channel, views, monthsAgo}) {
         </span>
         <span className="videoSuggestionsCard__channel">{channel}</span>
         <span className="videoSuggestionsCard__viewsAndDate">
-          {`${views}k views | ${Math.ceil(Math.random()*12)} Months Ago`}
+          {`${views}k views | ${monthsAgo} Months Ago`}
         </span>
       </div>
     </div>

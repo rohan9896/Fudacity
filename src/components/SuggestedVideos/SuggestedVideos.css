@@ -1,0 +1,10 @@
+.SuggestedVideos__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.suggestedVideos__item {
+    margin: 0.5rem 0;
+}

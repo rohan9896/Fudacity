@@ -1,6 +1,7 @@
 import React from 'react'
 import "./WatchPage.css"
 import VideoCardExpand from "../VideoCardExpand/VideoCardExpand"
+import SuggestedVideos from '../SuggestedVideos/SuggestedVideos'
 
 function WatchPage(detailsProps) {
     return (
@@ -8,7 +9,9 @@ function WatchPage(detailsProps) {
             <div>
                 <VideoCardExpand {...detailsProps} />
             </div>
-            <div></div>
+            <div>
+                <SuggestedVideos />
+            </div>
         </div>
     )
 }

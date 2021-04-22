@@ -5,7 +5,7 @@
 
 @media screen and (max-width: 1080px) {
     .VideoCardExpand__wrapper {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
   }
 }
