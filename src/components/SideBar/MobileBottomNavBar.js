@@ -13,7 +13,7 @@ function MobileBottomNavBar() {
               <NavLink
                 end
                 to={item.route}
-                activeStyle={{ fontWeight: "700", fontFamily: "Arial Black" }}
+                activeStyle={{ fontWeight: "700", fontFamily: "Segoe UI" }}
                 style={{ textDecoration: "none", color: "black" }}
                 key={item.id}
               >
