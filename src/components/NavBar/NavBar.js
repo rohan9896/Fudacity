@@ -16,7 +16,7 @@ function NavBar() {
     if(inputVal) {
       dispatch({type: "SEARCH_VIDEOS", payload: inputVal})
     }
-  }, [])
+  }, [inputVal, dispatch])
 
   return (
     <div className="NavBar">
