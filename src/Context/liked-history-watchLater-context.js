@@ -11,6 +11,7 @@ const actionTypes = {
   ADD_TO_LIKED: "ADD_TO_LIKED",
   REMOVE_FROM_LIKED: "REMOVE_FROM_LIKED",
   TOGGLE_DISLIKED: "TOGGLE_DISLIKED",
+  SEARCH_VIDEOS: "SEARCH_VIDEOS"
 };
 
 function generateAllCategoriesVideos() {
@@ -27,6 +28,7 @@ const initialState = {
   historyArr: [],
   likedArr: [],
   watchLaterArr: [],
+  searchedVideos: []
 };
 
 const reducerFunction = (state, action) => {
@@ -90,6 +92,11 @@ const reducerFunction = (state, action) => {
           (video) => video.id !== action.payload
         ),
       };
+    case actionTypes.SEARCH_VIDEOS:
+      return {
+        ...state,
+        searchedVideos: state.allVideosArr.filter(video => video.title.toLowerCase().includes(action.payload.toLowerCase()))
+      }
     default:
       return state;
   }

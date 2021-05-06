@@ -61,7 +61,7 @@ function VideoCardExpand({
               });
               isVideoLiked(id)
                 ? toast.warning("Removed from liked")
-                : toast.success("Added to liked");
+                : toast.success("Video liked");
             }}
             className="btn"
           >
@@ -77,6 +77,7 @@ function VideoCardExpand({
           <button
             onClick={() => {
               dispatch({ type: "TOGGLE_DISLIKED", payload: id });
+              disliked ? toast.warning("Removed from disliked") : toast.success("Video disliked")
             }}
             className="btn"
           >

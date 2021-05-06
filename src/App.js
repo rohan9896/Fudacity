@@ -7,28 +7,33 @@ import { useLikedHistoryWatchLater } from "./Context/liked-history-watchLater-co
 import LikedHistoryWatchLaterPage from "./components/LikedHistoryWatchLaterVideosPage/LikedHistoryWatchLaterVideosPage";
 import ClearHistoryBtn from "./components/ClearHistoryBtn/ClearHistoryBtn";
 import NoVideosFoundPage from "./components/NoVideosFoundPage/NoVideosFoundPage";
+import SearchGrid from "./components/SearchGrid/SearchGrid";
 
 function App() {
   const { state } = useLikedHistoryWatchLater();
 
   return (
     <>
+      <NavBar />
       <Routes>
         <Route
           path="/"
           element={
             <>
-              <NavBar />
               <CategoryScroller />
               <LandingPage />
             </>
           }
         />
+        <Route path="/:searchQuery" element={
+          <>
+            <SearchGrid />
+          </>
+        } />
         <Route
           path="/liked"
           element={
             <>
-              <NavBar />
               {state.likedArr.length === 0 ? (
                 <NoVideosFoundPage />
               ) : (
@@ -45,7 +50,6 @@ function App() {
           path="/watch-later"
           element={
             <>
-              <NavBar />
               {state.watchLaterArr.length === 0 ? (
                 <NoVideosFoundPage />
               ) : (
@@ -61,8 +65,7 @@ function App() {
         <Route
           path="/history"
           element={
-            <>
-              <NavBar />
+            <>         
               {state.historyArr.length === 0 ? (
                 <NoVideosFoundPage />
               ) : (
@@ -84,7 +87,6 @@ function App() {
               path={videoObj.id}
               element={
                 <>
-                  <NavBar />
                   <WatchPage {...videoObj} />
                 </>
               }

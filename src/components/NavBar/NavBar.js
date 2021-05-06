@@ -1,8 +1,23 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./NavBar.css";
-import { Link } from "react-router-dom";
+import { Link,useNavigate, useLocation } from "react-router-dom";
+import { useLikedHistoryWatchLater } from "../../Context/liked-history-watchLater-context";
+
 
 function NavBar() {
+
+  const searchQuery = new URLSearchParams(useLocation().search);
+
+  const {dispatch} = useLikedHistoryWatchLater();
+  const [inputVal, setInputVal] = useState(searchQuery.get('q'));
+  let navigate = useNavigate();
+
+  useEffect(() => {
+    if(inputVal) {
+      dispatch({type: "SEARCH_VIDEOS", payload: inputVal})
+    }
+  }, [])
+
   return (
     <div className="NavBar">
       <nav>
@@ -22,8 +37,13 @@ function NavBar() {
               type="text"
               className="searchInput-NonExpand"
               placeholder="Search..."
+              value={inputVal}
+              onChange={(e) => setInputVal(e.target.value)}
             />
-            <button>
+            <button disabled={inputVal === ''} onClick={() => {
+              dispatch({type: "SEARCH_VIDEOS", payload: inputVal})
+              navigate(`/search?q=${inputVal}`);
+            }}>
               <span role="img">🔍</span>
             </button>
           </li>
