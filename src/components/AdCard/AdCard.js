@@ -1,7 +1,7 @@
 import React from "react";
 import "./AdCard.css";
 
-function AdCard() {
+export function AdCard() {
   return (
     <div className="AdCard">
       <img
@@ -24,4 +24,4 @@ function AdCard() {
   );
 }
 
-export default AdCard;
+// export default AdCard;

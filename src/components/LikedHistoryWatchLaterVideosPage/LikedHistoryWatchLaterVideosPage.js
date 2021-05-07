@@ -1,10 +1,8 @@
 import React from "react";
 import "../LandingPage/LandingPage.css";
-import VideoCardGrid from "../VideoCardGrid/VideoCardGrid";
-import SideBar from "../SideBar/SideBar";
-import MobileBottomNavBar from "../SideBar/MobileBottomNavBar";
+import { SideBar, MobileBottomNavBar, VideoCardGrid } from "../index";
 
-function LikedHistoryWatchLaterVideosPage({
+export function LikedHistoryWatchLaterVideosPage({
   cross,
   arrayToBeMapped,
   actionTypeOfCross,
@@ -29,5 +27,3 @@ function LikedHistoryWatchLaterVideosPage({
     </>
   );
 }
-
-export default LikedHistoryWatchLaterVideosPage;

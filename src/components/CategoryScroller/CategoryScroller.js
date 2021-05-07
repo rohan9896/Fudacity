@@ -66,7 +66,7 @@ const categories = [
   },
 ];
 
-function CategoryScroller() {
+export function CategoryScroller() {
   const { selectedCategory, setSelectedCategory } = useSelectedCategory();
 
   return (
@@ -90,5 +90,3 @@ function CategoryScroller() {
     </div>
   );
 }
-
-export default CategoryScroller;

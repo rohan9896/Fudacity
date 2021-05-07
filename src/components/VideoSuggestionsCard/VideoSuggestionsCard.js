@@ -1,7 +1,15 @@
 import React from "react";
 import "./VideoSuggestionsCard.css";
 
-function VideoSuggestionsCard({id, link, thumbnail, title, channel, views, monthsAgo}) {
+export function VideoSuggestionsCard({
+  id,
+  link,
+  thumbnail,
+  title,
+  channel,
+  views,
+  monthsAgo,
+}) {
   return (
     <div className="videoSuggestionsCard">
       <img
@@ -10,9 +18,7 @@ function VideoSuggestionsCard({id, link, thumbnail, title, channel, views, month
         alt="thumbnail"
       />
       <div className="videoSuggestionsCard__secondColumn">
-        <span className="videoSuggestionsCard__title">
-          {title}
-        </span>
+        <span className="videoSuggestionsCard__title">{title}</span>
         <span className="videoSuggestionsCard__channel">{channel}</span>
         <span className="videoSuggestionsCard__viewsAndDate">
           {`${views}k views | ${monthsAgo} Months Ago`}
@@ -21,5 +27,3 @@ function VideoSuggestionsCard({id, link, thumbnail, title, channel, views, month
     </div>
   );
 }
-
-export default VideoSuggestionsCard;

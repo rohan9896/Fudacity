@@ -2,7 +2,7 @@ import React from "react";
 import "./ClearHistoryBtn.css";
 import { useLikedHistoryWatchLater } from "../../Context/liked-history-watchLater-context";
 
-function ClearHistoryBtn() {
+export function ClearHistoryBtn() {
   const { dispatch } = useLikedHistoryWatchLater();
 
   return (
@@ -16,5 +16,3 @@ function ClearHistoryBtn() {
     </div>
   );
 }
-
-export default ClearHistoryBtn;

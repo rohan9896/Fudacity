@@ -11,7 +11,7 @@ const actionTypes = {
   ADD_TO_LIKED: "ADD_TO_LIKED",
   REMOVE_FROM_LIKED: "REMOVE_FROM_LIKED",
   TOGGLE_DISLIKED: "TOGGLE_DISLIKED",
-  SEARCH_VIDEOS: "SEARCH_VIDEOS"
+  SEARCH_VIDEOS: "SEARCH_VIDEOS",
 };
 
 function generateAllCategoriesVideos() {
@@ -28,7 +28,7 @@ const initialState = {
   historyArr: [],
   likedArr: [],
   watchLaterArr: [],
-  searchedVideos: []
+  searchedVideos: [],
 };
 
 const reducerFunction = (state, action) => {
@@ -95,8 +95,10 @@ const reducerFunction = (state, action) => {
     case actionTypes.SEARCH_VIDEOS:
       return {
         ...state,
-        searchedVideos: state.allVideosArr.filter(video => video.title.toLowerCase().includes(action.payload.toLowerCase()))
-      }
+        searchedVideos: state.allVideosArr.filter((video) =>
+          video.title.toLowerCase().includes(action.payload.toLowerCase())
+        ),
+      };
     default:
       return state;
   }
@@ -106,7 +108,8 @@ export default function LikedHistoryWatchLaterProvider({ children }) {
   const [state, dispatch] = useReducer(reducerFunction, initialState);
 
   const isVideoLiked = (id) => state.likedArr.some((video) => video.id === id);
-  const isVideoInWatchLater = (id) => state.watchLaterArr.some(video => video.id === id);
+  const isVideoInWatchLater = (id) =>
+    state.watchLaterArr.some((video) => video.id === id);
 
   return (
     <LikedHistoryWatchLaterContext.Provider

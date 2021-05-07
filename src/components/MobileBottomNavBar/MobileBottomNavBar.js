@@ -1,9 +1,9 @@
 import React from "react";
 import "./MobileBottomNavBar.css";
 import { NavLink } from "react-router-dom";
-import { sideBar } from "./sidebar-details-array";
+import { sideBar } from "../SideBar/sidebar-details-array";
 
-function MobileBottomNavBar() {
+export function MobileBottomNavBar() {
   return (
     <>
       <nav className="videolibNav">
@@ -33,5 +33,3 @@ function MobileBottomNavBar() {
     </>
   );
 }
-
-export default MobileBottomNavBar;

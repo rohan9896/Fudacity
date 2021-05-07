@@ -1,13 +1,15 @@
 import { Routes, Route } from "react-router-dom";
-import CategoryScroller from "./components/CategoryScroller/CategoryScroller";
-import LandingPage from "./components/LandingPage/LandingPage";
-import NavBar from "./components/NavBar/NavBar";
-import WatchPage from "./components/WatchPage/WatchPage";
+import {
+  CategoryScroller,
+  ClearHistoryBtn,
+  LandingPage,
+  LikedHistoryWatchLaterVideosPage,
+  NavBar,
+  NoVideosFoundPage,
+  SearchGrid,
+  WatchPage,
+} from "./components/index";
 import { useLikedHistoryWatchLater } from "./Context/liked-history-watchLater-context";
-import LikedHistoryWatchLaterPage from "./components/LikedHistoryWatchLaterVideosPage/LikedHistoryWatchLaterVideosPage";
-import ClearHistoryBtn from "./components/ClearHistoryBtn/ClearHistoryBtn";
-import NoVideosFoundPage from "./components/NoVideosFoundPage/NoVideosFoundPage";
-import SearchGrid from "./components/SearchGrid/SearchGrid";
 
 function App() {
   const { state } = useLikedHistoryWatchLater();
@@ -25,11 +27,14 @@ function App() {
             </>
           }
         />
-        <Route path="/:searchQuery" element={
-          <>
-            <SearchGrid />
-          </>
-        } />
+        <Route
+          path="/:searchQuery"
+          element={
+            <>
+              <SearchGrid />
+            </>
+          }
+        />
         <Route
           path="/liked"
           element={
@@ -37,7 +42,7 @@ function App() {
               {state.likedArr.length === 0 ? (
                 <NoVideosFoundPage />
               ) : (
-                <LikedHistoryWatchLaterPage
+                <LikedHistoryWatchLaterVideosPage
                   actionTypeOfCross="REMOVE_FROM_LIKED"
                   arrayToBeMapped={state.likedArr}
                   cross
@@ -53,7 +58,7 @@ function App() {
               {state.watchLaterArr.length === 0 ? (
                 <NoVideosFoundPage />
               ) : (
-                <LikedHistoryWatchLaterPage
+                <LikedHistoryWatchLaterVideosPage
                   actionTypeOfCross="REMOVE_FROM_WATCHLATER"
                   arrayToBeMapped={state.watchLaterArr}
                   cross
@@ -65,13 +70,13 @@ function App() {
         <Route
           path="/history"
           element={
-            <>         
+            <>
               {state.historyArr.length === 0 ? (
                 <NoVideosFoundPage />
               ) : (
                 <>
                   <ClearHistoryBtn />
-                  <LikedHistoryWatchLaterPage
+                  <LikedHistoryWatchLaterVideosPage
                     actionTypeOfCross="REMOVE_FROM_HISTORY"
                     arrayToBeMapped={state.historyArr}
                   />

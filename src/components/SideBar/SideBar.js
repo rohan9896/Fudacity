@@ -3,7 +3,7 @@ import "./SideBar.css";
 import { NavLink } from "react-router-dom";
 import { sideBar } from "./sidebar-details-array";
 
-function SideBar() {
+export function SideBar() {
   return (
     <div className="sideBar__List">
       {sideBar.map((item) => {
@@ -25,5 +25,3 @@ function SideBar() {
     </div>
   );
 }
-
-export default SideBar;

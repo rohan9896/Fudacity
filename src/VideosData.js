@@ -452,7 +452,7 @@ function generateVideosData() {
       liked: false,
       disliked: false,
       views: faker.datatype.number(999),
-      monthsAgo: faker.datatype.number(12)
+      monthsAgo: faker.datatype.number(12),
     },
     {
       id: "_PwhiWxHK8o",
@@ -466,7 +466,7 @@ function generateVideosData() {
       liked: false,
       disliked: false,
       views: faker.datatype.number(999),
-      monthsAgo: faker.datatype.number(12)
+      monthsAgo: faker.datatype.number(12),
     },
   ];
 
@@ -474,8 +474,7 @@ function generateVideosData() {
     {
       id: "ua-CiDNNj30",
       thumbnail: "https://i3.ytimg.com/vi/ua-CiDNNj30/hqdefault.jpg",
-      title:
-        "Learn Data Science Tutorial - Full Course for Beginners",
+      title: "Learn Data Science Tutorial - Full Course for Beginners",
       videoLength: "5:11",
       channel: "freeCodeCamp.org",
       channelImg:
@@ -484,12 +483,13 @@ function generateVideosData() {
       liked: false,
       disliked: false,
       views: faker.datatype.number(999),
-      monthsAgo: faker.datatype.number(12)
+      monthsAgo: faker.datatype.number(12),
     },
     {
       id: "-ETQ97mXXF0",
       thumbnail: "https://i3.ytimg.com/vi/-ETQ97mXXF0/hqdefault.jpg",
-      title: "Data Science Full Course - Learn Data Science in 10 Hours | Data Science For Beginners | Edureka",
+      title:
+        "Data Science Full Course - Learn Data Science in 10 Hours | Data Science For Beginners | Edureka",
       videoLength: "10:23:56",
       channel: "edureka!",
       channelImg:
@@ -498,7 +498,7 @@ function generateVideosData() {
       liked: false,
       disliked: false,
       views: faker.datatype.number(999),
-      monthsAgo: faker.datatype.number(12)
+      monthsAgo: faker.datatype.number(12),
     },
     {
       id: "JwSS70SZdyM",
@@ -513,7 +513,7 @@ function generateVideosData() {
       liked: false,
       disliked: false,
       views: faker.datatype.number(999),
-      monthsAgo: faker.datatype.number(12)
+      monthsAgo: faker.datatype.number(12),
     },
   ];
 
@@ -531,7 +531,7 @@ function generateVideosData() {
       liked: false,
       disliked: false,
       views: faker.datatype.number(999),
-      monthsAgo: faker.datatype.number(12)
+      monthsAgo: faker.datatype.number(12),
     },
     {
       id: "QphJEO9ZX6s",
@@ -545,7 +545,7 @@ function generateVideosData() {
       liked: false,
       disliked: false,
       views: faker.datatype.number(999),
-      monthsAgo: faker.datatype.number(12)
+      monthsAgo: faker.datatype.number(12),
     },
   ];
 
@@ -553,8 +553,7 @@ function generateVideosData() {
     {
       id: "LsNW4FPHuZE",
       thumbnail: "https://i3.ytimg.com/vi/LsNW4FPHuZE/hqdefault.jpg",
-      title:
-        "Learn Unreal Engine (with C++) - Full Course for Beginners",
+      title: "Learn Unreal Engine (with C++) - Full Course for Beginners",
       videoLength: "4:42:42",
       channel: "freeCodeCamp.org",
       channelImg:
@@ -563,7 +562,7 @@ function generateVideosData() {
       liked: false,
       disliked: false,
       views: faker.datatype.number(999),
-      monthsAgo: faker.datatype.number(12)
+      monthsAgo: faker.datatype.number(12),
     },
     {
       id: "yo40OaolRs8",
@@ -577,13 +576,12 @@ function generateVideosData() {
       liked: false,
       disliked: false,
       views: faker.datatype.number(999),
-      monthsAgo: faker.datatype.number(12)
+      monthsAgo: faker.datatype.number(12),
     },
     {
       id: "gB1F9G0JXOo",
       thumbnail: "https://img.youtube.com/vi/gB1F9G0JXOo/mqdefault.jpg",
-      title:
-        "Learn Unity - Beginner's Game Development Tutorial",
+      title: "Learn Unity - Beginner's Game Development Tutorial",
       videoLength: "7:24:39",
       channel: "freeCodeCamp.org",
       channelImg:
@@ -592,7 +590,7 @@ function generateVideosData() {
       liked: false,
       disliked: false,
       views: faker.datatype.number(999),
-      monthsAgo: faker.datatype.number(12)
+      monthsAgo: faker.datatype.number(12),
     },
   ];
 
@@ -600,8 +598,7 @@ function generateVideosData() {
     {
       id: "xpDnVSmNFX0",
       thumbnail: "https://i3.ytimg.com/vi/xpDnVSmNFX0/hqdefault.jpg",
-      title:
-        "System Design Basics: Horizontal vs. Vertical Scaling",
+      title: "System Design Basics: Horizontal vs. Vertical Scaling",
       videoLength: "7:55",
       channel: "Gaurav Sen",
       channelImg:
@@ -610,12 +607,13 @@ function generateVideosData() {
       liked: false,
       disliked: false,
       views: faker.datatype.number(999),
-      monthsAgo: faker.datatype.number(12)
+      monthsAgo: faker.datatype.number(12),
     },
     {
       id: "FSR1s2b-l_I",
       thumbnail: "https://i3.ytimg.com/vi/FSR1s2b-l_I/hqdefault.jpg",
-      title: "Introduction to System Design | System Design Tutorials | Part 1 | 2020",
+      title:
+        "Introduction to System Design | System Design Tutorials | Part 1 | 2020",
       videoLength: "4:48",
       channel: "sudoCODE",
       channelImg:
@@ -624,7 +622,7 @@ function generateVideosData() {
       liked: false,
       disliked: false,
       views: faker.datatype.number(999),
-      monthsAgo: faker.datatype.number(12)
+      monthsAgo: faker.datatype.number(12),
     },
     {
       id: "HvSsGjxy7so",
@@ -639,7 +637,7 @@ function generateVideosData() {
       liked: false,
       disliked: false,
       views: faker.datatype.number(999),
-      monthsAgo: faker.datatype.number(12)
+      monthsAgo: faker.datatype.number(12),
     },
   ];
   return {

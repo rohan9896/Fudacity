@@ -5,7 +5,7 @@ import ReactPlayer from "react-player";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-function VideoCardExpand({
+export function VideoCardExpand({
   id,
   thumbnail,
   title,
@@ -77,7 +77,9 @@ function VideoCardExpand({
           <button
             onClick={() => {
               dispatch({ type: "TOGGLE_DISLIKED", payload: id });
-              disliked ? toast.warning("Removed from disliked") : toast.success("Video disliked")
+              disliked
+                ? toast.warning("Removed from disliked")
+                : toast.success("Video disliked");
             }}
             className="btn"
           >
@@ -122,5 +124,3 @@ function VideoCardExpand({
     </div>
   );
 }
-
-export default VideoCardExpand;

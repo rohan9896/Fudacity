@@ -2,7 +2,7 @@ import React from "react";
 import "./NoVideosFoundPage.css";
 import { Link } from "react-router-dom";
 
-function NoVideosFoundPage() {
+export function NoVideosFoundPage() {
   return (
     <div className="NoVideoFoundPage__container">
       <img
@@ -16,5 +16,3 @@ function NoVideosFoundPage() {
     </div>
   );
 }
-
-export default NoVideosFoundPage;

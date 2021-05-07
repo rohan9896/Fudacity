@@ -1,22 +1,20 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import "./NavBar.css";
-import { Link,useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useLikedHistoryWatchLater } from "../../Context/liked-history-watchLater-context";
 
-
-function NavBar() {
-
+export function NavBar() {
   const searchQuery = new URLSearchParams(useLocation().search);
 
-  const {dispatch} = useLikedHistoryWatchLater();
-  const [inputVal, setInputVal] = useState(searchQuery.get('q'));
+  const { dispatch } = useLikedHistoryWatchLater();
+  const [inputVal, setInputVal] = useState(searchQuery.get("q"));
   let navigate = useNavigate();
 
   useEffect(() => {
-    if(inputVal) {
-      dispatch({type: "SEARCH_VIDEOS", payload: inputVal})
+    if (inputVal) {
+      dispatch({ type: "SEARCH_VIDEOS", payload: inputVal });
     }
-  }, [inputVal, dispatch])
+  }, [inputVal, dispatch]);
 
   return (
     <div className="NavBar">
@@ -40,11 +38,16 @@ function NavBar() {
               value={inputVal}
               onChange={(e) => setInputVal(e.target.value)}
             />
-            <button disabled={inputVal === ''} onClick={() => {
-              dispatch({type: "SEARCH_VIDEOS", payload: inputVal})
-              navigate(`/search?q=${inputVal}`);
-            }}>
-              <span role="img">🔍</span>
+            <button
+              disabled={inputVal === ""}
+              onClick={() => {
+                dispatch({ type: "SEARCH_VIDEOS", payload: inputVal });
+                navigate(`/search?q=${inputVal}`);
+              }}
+            >
+              <span aria-label="search" role="img">
+                🔍
+              </span>
             </button>
           </li>
         </ul>
@@ -52,5 +55,3 @@ function NavBar() {
     </div>
   );
 }
-
-export default NavBar;

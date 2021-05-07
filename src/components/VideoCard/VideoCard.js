@@ -4,7 +4,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
 import { useLikedHistoryWatchLater } from "../../Context/liked-history-watchLater-context";
 
-function VideoCard({
+export function VideoCard({
   id,
   thumbnail,
   title,
@@ -85,5 +85,3 @@ function VideoCard({
     </>
   );
 }
-
-export default VideoCard;
