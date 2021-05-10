@@ -9,7 +9,7 @@
 }
 
 .videoCardExpand__videoWrapper {
-  aspect-ratio: 16/9;
+  height: 80vh;
 }
 
 @media screen and (max-width: 500px) {
@@ -17,7 +17,7 @@
     margin: 0;
   }
   .videoCardExpand__videoWrapper {
-    aspect-ratio: 1;
+    height: 40vh;
   }
 }
 
