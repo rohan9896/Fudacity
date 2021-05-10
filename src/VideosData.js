@@ -567,7 +567,7 @@ function generateVideosData() {
     {
       id: "yo40OaolRs8",
       thumbnail: "https://i3.ytimg.com/vi/yo40OaolRs8/hqdefault.jpg",
-      title: "Introduction to data structures",
+      title: "How to Really Make a Phaser Game from Scratch! Part 1 - UNCUT",
       videoLength: "26:34",
       channel: "Ourcade",
       channelImg:

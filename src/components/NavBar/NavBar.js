@@ -45,9 +45,7 @@ export function NavBar() {
                 navigate(`/search?q=${inputVal}`);
               }}
             >
-              <span aria-label="search" role="img">
-                🔍
-              </span>
+              <img src="https://github.com/rohan9896/Testing-for-CSS-component-library/blob/main/icons/videoLib/search-icon.png?raw=true" alt="search-icon" />
             </button>
           </li>
         </ul>
