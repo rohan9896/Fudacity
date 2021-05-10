@@ -41,7 +41,7 @@ export function NavBar() {
             <button
               disabled={inputVal === ""}
               onClick={() => {
-                dispatch({ type: "SEARCH_VIDEOS", payload: inputVal });
+                dispatch({ type: inputVal ? "SEARCH_VIDEOS" : "NO_VIDEOS_FOUND", payload: inputVal });
                 navigate(`/search?q=${inputVal}`);
               }}
             >

@@ -104,11 +104,3 @@ function App() {
 }
 
 export default App;
-
-/*
-<VideoSuggestionsCard
-  thumbnail="https://img.youtube.com/vi/Wa6it7j_OHY/mqdefault.jpg"
-  title="Learn useCallback In 8 Minutes"
-  channel="WebDev Simplified"
-  views={2.2}
-/> */
