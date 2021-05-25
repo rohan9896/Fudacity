@@ -69,10 +69,16 @@ export const reducerFunction = (state, action) => {
         ),
       };
     case actionTypes.NO_VIDEOS_FOUND:
-        return {
-            ...state,
-            searchedVideos: []
-        }
+      return {
+        ...state,
+        searchedVideos: [],
+      };
+    case actionTypes.SET_VIDEOS:
+      return {
+        ...state,
+        categoryArr: action.payload,
+        allVideosArr: Object.keys(action.payload).map(key => action.payload[key]).flat(),
+      };
     default:
       return state;
   }

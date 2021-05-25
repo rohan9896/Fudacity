@@ -28,7 +28,7 @@ function App() {
           }
         />
         <Route
-          path="/:searchQuery"
+          path="/search/:searchQuery"
           element={
             <>
               <SearchGrid />
@@ -85,19 +85,14 @@ function App() {
             </>
           }
         />
-        {state.allVideosArr.map((videoObj) => {
-          return (
-            <Route
-              key={videoObj.id}
-              path={videoObj.id}
-              element={
-                <>
-                  <WatchPage {...videoObj} />
-                </>
-              }
-            />
-          );
-        })}
+        <Route
+          path="/:id"
+          element={
+            <>
+              <WatchPage />
+            </>
+          }
+        />
       </Routes>
     </>
   );

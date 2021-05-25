@@ -7,7 +7,7 @@ export function NavBar() {
   const searchQuery = new URLSearchParams(useLocation().search);
 
   const { dispatch } = useLikedHistoryWatchLater();
-  const [inputVal, setInputVal] = useState(searchQuery.get("q"));
+  const [inputVal, setInputVal] = useState(searchQuery.get("q") || '');
   let navigate = useNavigate();
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export function NavBar() {
               disabled={inputVal === ""}
               onClick={() => {
                 dispatch({ type: inputVal ? "SEARCH_VIDEOS" : "NO_VIDEOS_FOUND", payload: inputVal });
-                navigate(`/search?q=${inputVal}`);
+                navigate(`search/search?q=${inputVal}`);
               }}
             >
               <img src="https://github.com/rohan9896/Testing-for-CSS-component-library/blob/main/icons/videoLib/search-icon.png?raw=true" alt="search-icon" />

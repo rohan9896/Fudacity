@@ -1,32 +1,36 @@
-import { createContext, useContext, useReducer } from "react";
-import { categorywiseVideoData } from "../VideosData";
-import {reducerFunction} from "./reducer-function"
+import { createContext, useContext, useReducer, useEffect } from "react";
+import { reducerFunction } from "./reducer-function";
+import axios from "axios"
 
 export const LikedHistoryWatchLaterContext = createContext();
 
-function generateAllCategoriesVideos() {
-  const allCategoriesVideos = Object.keys(categorywiseVideoData).map((key) => {
-    return categorywiseVideoData[key];
-  });
-  return allCategoriesVideos.flat();
-}
-const allCategoriesVideosData = generateAllCategoriesVideos();
-
-const initialState = {
-  allVideosArr: allCategoriesVideosData,
-  categoryArr: categorywiseVideoData,
-  historyArr: [],
-  likedArr: [],
-  watchLaterArr: [],
-  searchedVideos: [],
-};
-
 export default function LikedHistoryWatchLaterProvider({ children }) {
+  
+  const initialState = {
+    allVideosArr: [],
+    categoryArr: [],
+    historyArr: [],
+    likedArr: [],
+    watchLaterArr: [],
+    searchedVideos: [],
+  };
+
   const [state, dispatch] = useReducer(reducerFunction, initialState);
 
   const isVideoLiked = (id) => state.likedArr.some((video) => video.id === id);
   const isVideoInWatchLater = (id) =>
     state.watchLaterArr.some((video) => video.id === id);
+
+    useEffect(() => {
+      (async () => {
+        const response = await axios.get("https://video-lib-backend.rohangupta7.repl.co/videos/categorywise-videos-data");
+    
+        if(response.data.success) {
+          const categorywiseVideoData = response.data.categorywiseVideoData;
+          dispatch({type: "SET_VIDEOS", payload: categorywiseVideoData})
+        }
+      })()
+    }, [dispatch])
 
   return (
     <LikedHistoryWatchLaterContext.Provider

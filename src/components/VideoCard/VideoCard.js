@@ -1,7 +1,7 @@
 import React from "react";
 import "./VideoCard.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useLikedHistoryWatchLater } from "../../Context/liked-history-watchLater-context";
 
 export function VideoCard({
@@ -25,26 +25,24 @@ export function VideoCard({
     return str;
   };
 
+  const navigate = useNavigate();
+
   return (
     <>
       <div key={id} className="videoCard">
         <div className="videoCard__thumbnail">
-          <Link
-            to={`/${id}`}
-            style={{ textDecoration: "none", color: "black" }}
-          >
-            <LazyLoadImage
-              effect="blur"
-              alt="video_thumbnail"
-              style={{
-                width: "25rem",
-                maxWidth: "100%",
-                height: "17rem",
-                margin: "0",
-              }}
-              src={thumbnail}
-            />
-          </Link>
+          <LazyLoadImage
+          onClick={() => navigate(`/${id}`)}
+            effect="blur"
+            alt="video_thumbnail"
+            style={{
+              width: "25rem",
+              maxWidth: "100%",
+              height: "17rem",
+              margin: "0",
+            }}
+            src={thumbnail}
+          />
           <span className="videoCard__videoLength">{videoLength}</span>
         </div>
 
@@ -52,22 +50,17 @@ export function VideoCard({
           <div className="videoCard__channelIcon">
             <img className="faceavatar" src={channelImg} alt="avatar" />
           </div>
-          <Link
-            to={`/${id}`}
-            style={{ textDecoration: "none", color: "black" }}
-          >
-            <div className="videoCard__titleContainer">
-              <p className="videoCard__title">
-                {overflowProcessedString(title, 34)}
-              </p>
-              <span className="videoCard__secondTitle">
-                {overflowProcessedString(
-                  `${channel} | ${views}k views | ${monthsAgo} months ago`,
-                  43
-                )}
-              </span>
-            </div>
-          </Link>
+          <div onClick={() => navigate(`/${id}`)} className="videoCard__titleContainer">
+            <p className="videoCard__title">
+              {overflowProcessedString(title, 34)}
+            </p>
+            <span className="videoCard__secondTitle">
+              {overflowProcessedString(
+                `${channel} | ${views}k views | ${monthsAgo} months ago`,
+                43
+              )}
+            </span>
+          </div>
         </div>
         <span
           onClick={() =>

@@ -1,38 +1,34 @@
 import "./VideoCardExpand.css";
 import { useRef, useEffect } from "react";
-import { useLikedHistoryWatchLater } from "../../Context/liked-history-watchLater-context";
 import ReactPlayer from "react-player";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useLocation } from "react-router-dom";
+import { useLikedHistoryWatchLater } from "../../Context/liked-history-watchLater-context";
 
-export function VideoCardExpand({
-  id,
-  thumbnail,
-  title,
-  videoLength,
-  channel,
-  channelImg,
-  link,
-  liked,
-  disliked,
-  views,
-  monthsAgo,
-}) {
+export function VideoCardExpand() {
+  const { pathname } = useLocation();
+  const id = pathname.substring(1);
+
   const inputNotes = useRef();
-  const {
-    dispatch,
-    isVideoLiked,
-    isVideoInWatchLater,
-  } = useLikedHistoryWatchLater();
+  const { state, dispatch, isVideoLiked, isVideoInWatchLater } =
+    useLikedHistoryWatchLater();
 
   const save = () => {
-    localStorage.setItem(id, JSON.stringify(inputNotes.current.value));
+    localStorage.setItem(
+      clickedVideo.id,
+      JSON.stringify(inputNotes.current.value)
+    );
     toast.success("Saved");
   };
 
   useEffect(() => {
-    inputNotes.current.value = JSON.parse(localStorage.getItem(id));
+    inputNotes.current.value = JSON.parse(
+      localStorage.getItem(clickedVideo.id)
+    );
   });
+
+  const clickedVideo = state.allVideosArr.find((video) => video.id === id);
 
   return (
     <div className="videoCardExpand">
@@ -42,24 +38,27 @@ export function VideoCardExpand({
           width="100%"
           height="100%"
           className="react-player"
-          url={link}
+          url={clickedVideo.link}
         />
       </div>
       <div className="videoCardExpand__details">
         <div>
-          <p className="videoCardExpand__title">{title}</p>
+          <p className="videoCardExpand__title">{clickedVideo.title}</p>
           <p className="videoCardExpand__viewsAndDate">
-            <strong>{channel}</strong> | {views}k views | {monthsAgo} months ago
+            <strong>{clickedVideo.channel}</strong> | {clickedVideo.views}k
+            views | {clickedVideo.monthsAgo} months ago
           </p>
         </div>
         <div className="videoCardExpand__Buttons">
           <button
             onClick={() => {
               dispatch({
-                type: isVideoLiked(id) ? "REMOVE_FROM_LIKED" : "ADD_TO_LIKED",
-                payload: id,
+                type: isVideoLiked(clickedVideo.id)
+                  ? "REMOVE_FROM_LIKED"
+                  : "ADD_TO_LIKED",
+                payload: clickedVideo.id,
               });
-              isVideoLiked(id)
+              isVideoLiked(clickedVideo.id)
                 ? toast.warning("Removed from liked")
                 : toast.success("Video liked");
             }}
@@ -68,7 +67,7 @@ export function VideoCardExpand({
             <img
               alt="btn"
               src={
-                liked
+                clickedVideo.liked
                   ? "https://raw.githubusercontent.com/rohan9896/Testing-for-CSS-component-library/403bf3efef4d411f345f5b77cfc87e638baeb54f/icons/videoLib/like-filled.svg"
                   : "https://raw.githubusercontent.com/rohan9896/Testing-for-CSS-component-library/b57630ad485a8ad95990506a9f8d00db49eb57bf/icons/videoLib/like.svg"
               }
@@ -76,8 +75,8 @@ export function VideoCardExpand({
           </button>
           <button
             onClick={() => {
-              dispatch({ type: "TOGGLE_DISLIKED", payload: id });
-              disliked
+              dispatch({ type: "TOGGLE_DISLIKED", payload: clickedVideo.id });
+              clickedVideo.disliked
                 ? toast.warning("Removed from disliked")
                 : toast.success("Video disliked");
             }}
@@ -86,7 +85,7 @@ export function VideoCardExpand({
             <img
               alt="btn"
               src={
-                disliked
+                clickedVideo.disliked
                   ? "https://raw.githubusercontent.com/rohan9896/Testing-for-CSS-component-library/403bf3efef4d411f345f5b77cfc87e638baeb54f/icons/videoLib/dislike-filled.svg"
                   : "https://raw.githubusercontent.com/rohan9896/Testing-for-CSS-component-library/b57630ad485a8ad95990506a9f8d00db49eb57bf/icons/videoLib/dislike.svg"
               }
@@ -94,8 +93,8 @@ export function VideoCardExpand({
           </button>
           <button
             onClick={() => {
-              dispatch({ type: "ADD_TO_WATCHLATER", payload: id });
-              isVideoInWatchLater(id)
+              dispatch({ type: "ADD_TO_WATCHLATER", payload: clickedVideo.id });
+              isVideoInWatchLater(clickedVideo.id)
                 ? toast.info("Already in watch later")
                 : toast.success("Added to watch later");
             }}

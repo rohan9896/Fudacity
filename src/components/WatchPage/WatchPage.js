@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./WatchPage.css";
 import { SuggestedVideos, VideoCardExpand } from "../index";
 
-export function WatchPage(detailsProps) {
+export function WatchPage() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
   return (
     <div className="VideoCardExpand__wrapper">
       <div>
-        <VideoCardExpand {...detailsProps} />
+        <VideoCardExpand />
       </div>
       <div>
         <SuggestedVideos />
