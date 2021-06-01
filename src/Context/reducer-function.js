@@ -73,12 +73,6 @@ export const reducerFunction = (state, action) => {
         ...state,
         searchedVideos: [],
       };
-    case actionTypes.SET_VIDEOS:
-      return {
-        ...state,
-        categoryArr: action.payload,
-        allVideosArr: Object.keys(action.payload).map(key => action.payload[key]).flat(),
-      };
     default:
       return state;
   }
