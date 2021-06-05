@@ -73,6 +73,11 @@ export const reducerFunction = (state, action) => {
         ...state,
         searchedVideos: [],
       };
+    case actionTypes.SET_ALL_VIDEOS:
+      return {
+        ...state,
+        allVideosArr: action.payload
+      }
     default:
       return state;
   }
