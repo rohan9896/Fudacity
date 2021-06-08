@@ -1,0 +1,18 @@
+.VideoCardGrid__container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-top: 1.5rem;
+  min-height: 90vh;
+  margin: 2rem;
+}
+
+.VideoCardGrid__item {
+  margin: 0.5rem;
+}
+
+@media screen and (max-width: 850px) {
+  .VideoCardGrid__item {
+    margin: 1rem 0;
+  }
+}

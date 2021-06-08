@@ -1,0 +1,82 @@
+@import url("https://effortlessui.netlify.app/base.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.videoCard {
+  font-family: "Poppins", sans-serif;
+  width: 370px;
+  background-color: #ebecf0;
+  cursor: pointer;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.videoCard:hover {
+  border: rgb(199, 189, 189) 1px solid;
+}
+
+.videoCard__detailsContainer {
+  display: flex;
+  margin: 0 0.3rem;
+  padding: 0.4rem 0.3rem;
+  margin: 0;
+  width: 25rem;
+  height: fit-content;
+  align-items: center;
+  max-width: 100%;
+}
+
+.videoCard__channelIcon {
+  padding: 0 0.2rem;
+}
+
+.videoCard__titleContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5rem;
+}
+
+.videoCard__title,
+.videoCard__secondTitle {
+  margin: 0 0.4 rem;
+}
+
+.videoCard__title {
+  font-weight: 900;
+  margin: 0;
+}
+
+.videoCard__secondTitle {
+  font-size: smaller;
+}
+
+.videoCard__thumbnail {
+  position: relative;
+}
+
+.videoCard__videoLength {
+  position: absolute;
+  bottom: 1rem;
+  right: 0.6rem;
+  background-color: black;
+  color: white;
+  padding: 0.2rem;
+  font-size: smaller;
+}
+
+.cross {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 0.3rem;
+  font-size: x-large;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+}

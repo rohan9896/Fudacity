@@ -1,0 +1,40 @@
+@import url("https://effortlessui.netlify.app/base.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.videolibNav__list {
+  font-family: "Poppins", sans-serif;
+  list-style-type: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #ebecf0;
+  border-top: 1px solid gray;
+  padding: 1rem 0;
+}
+
+.videolibNav__item {
+  margin: 0 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 935px) {
+  .videolibNav__item {
+    margin: 0.5rem 4rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .videolibNav__item {
+    margin: 0.5rem 2rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .videolibNav__item {
+    margin: 0.5rem 1.3rem;
+  }
+}

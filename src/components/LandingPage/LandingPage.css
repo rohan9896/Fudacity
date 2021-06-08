@@ -1,0 +1,27 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+@media screen and (max-width: 1080px) {
+    .sideBar {
+        display: none;
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.bottomNavBar {
+    position: sticky;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+@media screen and (min-width: 1080px) {
+    .bottomNavBar {
+        display: none;
+    }
+}

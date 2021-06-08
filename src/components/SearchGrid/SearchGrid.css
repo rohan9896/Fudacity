@@ -1,0 +1,11 @@
+.SearchGrid__heading {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 1.5rem;
+}
+
+@media screen and (max-width: 550px) {
+    .SearchGrid__heading {
+        justify-content: center;
+    }
+}

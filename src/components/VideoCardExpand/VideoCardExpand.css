@@ -1,0 +1,87 @@
+@import url("https://effortlessui.netlify.app/base.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.videoCardExpand {
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  max-width: 100%;
+  margin: 2.5rem;
+}
+
+.videoCardExpand__videoWrapper {
+  height: 80vh;
+}
+
+@media screen and (max-width: 500px) {
+  .videoCardExpand {
+    margin: 0;
+  }
+  .videoCardExpand__videoWrapper {
+    height: 40vh;
+  }
+}
+
+.videoCardExpand__details {
+  margin: 1rem 0.6rem;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #b8b9be;
+}
+
+.videoCardExpand__titleHeader {
+  color: rgb(59, 126, 228);
+}
+
+.videoCardExpand__title {
+  font-size: x-large;
+  font-weight: 800;
+}
+
+.videoCardExpand__viewsAndDate {
+  font-size: small;
+  color: gray;
+}
+
+.videoCardExpand__titleHeader,
+.videoCardExpand__title,
+.videoCardExpand__viewsAndDate {
+  margin: 0;
+}
+
+.videoCardExpand__Buttons {
+  display: flex;
+  align-items: flex-end;
+}
+
+.btn {
+  background-color: #F3F4F6;
+  border: none;
+  padding: 0.5rem;
+  margin: 0 0.2rem;
+}
+
+.btn > img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.videoCardExpand__notesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+.videoCardExpand__notes {
+  width: 80%;
+  height: 20rem;
+  font-size: x-large;
+  margin: 1rem;
+}
+
+.saveBtn {
+  display: flex;
+  justify-content: center;
+}

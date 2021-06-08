@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.videoSuggestionsCard {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  width: 22rem;
+  max-width: 100%;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.videoSuggestionsCard:hover {
+  border: 1px solid rgb(216, 208, 208);
+}
+
+.videoSuggestionsCard__firstColumn {
+  width: 10rem;
+  max-width: 100%;
+  margin-right: 0.5rem;
+}
+
+.videoSuggestionsCard__secondColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0.2rem;
+}
+
+.videoSuggestionsCard__title {
+  font-weight: 1000;
+}
+
+.videoSuggestionsCard__channel {
+  font-weight: 700;
+  font-size: smaller;
+}
+
+.videoSuggestionsCard__viewsAndDate {
+  font-size: smaller;
+}
