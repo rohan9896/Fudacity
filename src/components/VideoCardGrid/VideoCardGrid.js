@@ -9,7 +9,7 @@ export function VideoCardGrid({ arrayToBeMapped, cross, actionTypeOfCross }) {
   return (
     <>
       <div className="VideoCardGrid__container">
-        {arrayToBeMapped.map((item) => {
+        {arrayToBeMapped?.map((item) => {
           return (
             <div
               key={item.id}
